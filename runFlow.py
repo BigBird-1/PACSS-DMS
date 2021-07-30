@@ -331,10 +331,10 @@ if __name__ == '__main__':
     # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
     # flow.sales_return_flow("SN2107200001")
     # ll = flow.deposit_flow("居民身份证", phone="18698741001")  # 15896234582
-    # flow.deposit_flow("机构代码", phone="13632626584")
+    # flow.deposit_flow("机构代码")
     # flow.sales_flow("L0F6SUR127PYVMXEG", phone="13119799049")  # 13545489874  13119799049
     # flow.deposit_return_flow("DO2107200001")
-    # flow.sales_return_flow("SN2107200004")
+    flow.sales_return_flow("SN2107200012")
     # flow.into_stock("采购入库", "JTHB31B14M2078706")
 
 

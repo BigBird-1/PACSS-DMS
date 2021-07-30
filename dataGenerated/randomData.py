@@ -691,15 +691,35 @@ def random_name():
     return name
 
 
-if __name__ == '__main__':
-    # for i in range(20):
-    #     print(random_vin())
-    # # #
-    for i in range(500):
-        print(random_name())
-    # #
-    # for i in range(20):
-    #     print(random_card())
+def run():
+    input_str = input("""
+        *****随机数生成*****
+        --请输入指令数字--
+        1->姓名
+        2->车架号
+        3->身份证号码
+        4->手机号码
+        5->车牌号
+        您输入的数字:
+        """)
+    input_str2 = input("生成的数量(>=0的整数):")
+    if input_str == "1":
+        for i in range(int(input_str2)):
+            print(random_name())
+    elif input_str == "2":
+        for i in range(int(input_str2)):
+            print(random_vin())
+    elif input_str == "3":
+        for i in range(int(input_str2)):
+            print(random_card())
+    elif input_str == "4":
+        for i in range(int(input_str2)):
+            print(random_mobile())
+    elif input_str == "5":
+        for i in range(int(input_str2)):
+            print(random_car())
 
-    # print(random_mobile())
+
+if __name__ == '__main__':
+    run()
 
