@@ -298,24 +298,60 @@ from datetime import timedelta,datetime
 # a = " 21321 "
 # b = a.strip()
 # print(b)
-def aa():
-    return 1, 2
+from apscheduler.schedulers.blocking import BlockingScheduler
+from datetime import datetime
 
-ll = aa()
-
-print(ll[1])
-
-
-
+from pymongo import MongoClient
+from apscheduler.jobstores.memory import MemoryJobStore
+from apscheduler.jobstores.mongodb import MongoDBJobStore
+from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
 
 
+# 输出时间
+def job():
+    print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+# BlockingScheduler
 
 
+# scheduler = BlockingScheduler()
+# scheduler.add_job(job, 'cron', day_of_week='1-5', hour=17, minute=15)
+# scheduler.add_job(job, 'interval', seconds=5)
+# scheduler.start()
 
 
+# MongoDB 参数
+# host = '127.0.0.1'
+# port = 27017
+# client = MongoClient(host, port)
+
+# 存储方式
+# jobstores = {
+#     'mongo': MongoDBJobStore(collection='job', database='test', client=client),
+#     'default': MemoryJobStore()
+# }
+# executors = {
+#     'default': ThreadPoolExecutor(10),
+#     'processpool': ProcessPoolExecutor(3)
+# }
+# job_defaults = {
+#     'coalesce': False,
+#     'max_instances': 3
+# }
+# scheduler = BlockingScheduler(jobstores=jobstores, executors=executors, job_defaults=job_defaults)
+# scheduler.add_job(job, 'interval', seconds=5, jobstore='mongo')
+# scheduler.start()
+
+import re
 
 
+str1 = " width: 70px; height: 40px; top: 65px; left: 182px; border-radius: 2px;"
 
+a = re.search(r"left: [\d]+px", str1).group().split(" ")[1][:-2:]
+
+print(a.split(" ")[1][:-2:])
+
+
+print(str1.split(" "))
 
 
 

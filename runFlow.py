@@ -13,6 +13,8 @@ from interfaceTest.salesSettlement.advancePayment import advance_payment
 from interfaceTest.salesSettlement.settlementGathering import settlement_gathering
 from interfaceTest.initialization import initial
 from common import Log
+import readConfig
+from common.configEmail import SendEmail
 
 
 log = Log.logger
@@ -122,7 +124,7 @@ class RunFlow(object):
         :param phone: 手机号
         :return:
         """
-        order_no = deposit_order.new_save(code_desc, phone)
+        order_no, mobile = deposit_order.new_save(code_desc, phone)
         deposit_order.submit_audit(order_no)
         time.sleep(10)
         order_info = deposit_order.query(order_no)
@@ -143,7 +145,7 @@ class RunFlow(object):
         # -------------------订单审核通过后-----------------------------------------------------------------------------
         advance_payment.gathering(order_no)
 
-        return order_no
+        return order_no, mobile
 
     @staticmethod
     def deposit_return_flow(order_no):
@@ -217,7 +219,7 @@ class RunFlow(object):
         settlement_gathering.gathering(so_no)
         delivery_car.delivery(so_no, vin)
         if sales_params["自动出库"] == "12781002":  # 基础参数未勾需要手动出库
-            sd_no = out_stock.create_order(vin, "销售出库")
+            sd_no = out_stock.create_order("销售出库", vin)
             out_stock.out_store(sd_no)
         log.info("车辆已出库:{} -----(销售订单已关单:{})-----".format(vin, so_no))
 
@@ -312,29 +314,35 @@ class RunFlow(object):
         vin_l = self.shipping_flow()
         vin_s = vin_l[0]
         self.gross_flow(vin_s)
-        deposit_no = self.deposit_flow("居民身份证")
+        deposit_no, y_t = self.deposit_flow("居民身份证")
         self.deposit_return_flow(deposit_no)
-        self.deposit_flow("居民身份证", phone=phone)
-        sales_no = self.sales_flow(vin_s, phone=phone)
+        y_t, mobile = self.deposit_flow("居民身份证", phone=phone)
+        sales_no = self.sales_flow(vin_s, phone=mobile)
         self.sales_return_flow(sales_no)
         self.transfer_flow(vin_s)
         self.transfer_return_flow(vin_s)
         self.leave_stock("采购退回出库", vin_s)
 
+        on_off = readConfig.ReadConfig().get_email('on_off')
+        if on_off == 'on':
+            SendEmail().fox_mail()
+        else:
+            log.info(" 邮件发送开关配置未开启\n\n")
+
 
 flow = RunFlow()
 
 if __name__ == '__main__':
-    flow.erp_sales_flow(phone="15500879192")
+    flow.erp_sales_flow(phone="")
     # vin_l1 = flow.shipping_flow()
-    # flow.gross_flow("L0F6SUR127PYVMXEG")
+    # flow.gross_flow("0G4KCRYS8FUA68XVW")
     # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
     # flow.sales_return_flow("SN2107200001")
-    # ll = flow.deposit_flow("居民身份证", phone="18698741001")  # 15896234582
+    # ll = flow.deposit_flow("居民身份证", phone="18627145923")  # 15896234582
     # flow.deposit_flow("机构代码")
     # flow.sales_flow("L0F6SUR127PYVMXEG", phone="13119799049")  # 13545489874  13119799049
     # flow.deposit_return_flow("DO2107200001")
-    flow.sales_return_flow("SN2107200012")
+    # flow.sales_return_flow("SN2107200012")
     # flow.into_stock("采购入库", "JTHB31B14M2078706")
 
 

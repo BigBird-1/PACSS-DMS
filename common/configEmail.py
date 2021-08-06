@@ -17,7 +17,8 @@ subject = read_conf.get_email('subject')  # 从配置文件中读取，邮件主
 to = read_conf.get_email('to')  # 从配置文件中读取，邮件收件人
 cc = read_conf.get_email('cc')  # 从配置文件中读取，邮件抄送人
 fake_date = time.strftime('%Y%m%d', time.localtime(time.time()))
-mail_path = os.path.join(getpathInfo.get_path(), 'result', 'report', '{}.html'.format(fake_date))  # 获取测试报告路径
+# mail_path = os.path.join(getpathInfo.get_path(), 'result', 'report', '{}.html'.format(fake_date))  # 获取测试报告路径
+mail_path = os.path.join(getpathInfo.get_path(), 'result', 'logs')  # 获取测试报告路径
 
 
 class SendEmail(object):
@@ -44,7 +45,7 @@ class SendEmail(object):
         # 第一步：连接到smtp服务器
         smtp = smtplib.SMTP_SSL(host='smtp.qq.com', port=465)
         # 第二步：登录smtp服务器
-        smtp.login(user='1655719335@qq.com', password='qhhdbhlqjiushjhg')
+        smtp.login(user='1655719335@qq.com', password='ofyiqlkwtwgpcbec')
         # 第三步构建一封带附件的邮件
         # 创建一封多组件的邮件
         msg = MIMEMultipart()

@@ -1,14 +1,14 @@
-import logging
+import re
 import xlrd
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 # from hx_erp.hx_config.config import Config
 from selenium.webdriver.common.keys import Keys
+from common import Log
 
-logger = logging.getLogger()
-# 调用配置的日志
-# Config().set_up()
+
+log = Log.logger
 
 
 class LoginCs(object):
@@ -18,11 +18,14 @@ class LoginCs(object):
         self.driver = None
 
     def slide(self):
-        """滑动解锁"""
-        div = self.driver.find_element_by_xpath("//form[@class='el-form']/div[4]/div/div[3]")
+        """滑动解锁:空缺图片拖动填充"""
+        div = self.driver.find_element_by_xpath("//div[@class='dragVerifyImgDiv']/div/div[1]/div[2]/div[3]")
+        style = self.driver.find_element_by_xpath(
+            "//div[@class='dragVerifyImgDiv']/div/div[1]/div[1]/div[2]").get_attribute("style")
+        left_px = re.search(r"left: [\d]+px", style).group().split(" ")[1][:-2:]
         action = ActionChains(self.driver)
         action.click_and_hold(div).perform()
-        action.move_to_element_with_offset(to_element=div, xoffset=475, yoffset=0).release().perform()
+        action.move_to_element_with_offset(to_element=div, xoffset=int(left_px)+20, yoffset=0).release().perform()
 
     def logout(self):
         """从主页面退出系统到登录界面"""
@@ -39,7 +42,9 @@ class LoginCs(object):
 
     def login1(self):
         """一次登录"""
-        self.driver = webdriver.Chrome()
+        option = webdriver.ChromeOptions()
+        option.add_experimental_option("detach", True)  # option解决浏览器自动关闭
+        self.driver = webdriver.Chrome(options=option)
         self.driver.maximize_window()
         self.driver.implicitly_wait(3)  # 隐性等待3秒
         account = ['HD340400', 'A08D', 'hxqc2020!']
@@ -49,20 +54,15 @@ class LoginCs(object):
             self.driver.find_element_by_xpath("//form[@class='el-form']/div[1]/div/div/div/input").send_keys(account[0])
             self.driver.find_element_by_xpath("//form[@class='el-form']/div[1]/div/div/div/input").send_keys(Keys.TAB)
         except Exception as e:
-            logger.info('%s DMS地址请求失败或地址不正确' % e)
+            log.error('%s DMS地址请求失败或地址不正确' % e)
             self.driver.close()
             return
         self.xpath_expression(2, account[1])
         self.xpath_expression(3, account[2])
-        try:
-            self.slide()
-            self.driver.find_element_by_xpath("//form[@class='el-form']/div[5]/button").click()
-            # logger.info('HD340400-Admin-hxqc2018！登录成功')
-            return self.driver
-        except:
-            self.driver.close()
-            logger.info('滑动失败 未找到元素verify-move-block')
-            self.login1()
+        self.driver.find_element_by_xpath("//form[@class='el-form']/div[4]/button").click()
+        self.slide()
+        log.info('HD340400-A08D-hxqc2020！登录成功')
+        return self.driver
 
     def login2(self):
         """多次登录"""
@@ -78,11 +78,12 @@ class LoginCs(object):
             sleep(0.5)
             try:
                 if self.driver.find_element_by_id('error_info'):
-                    logger.info('%s-%s-%s 登录失败！！！' % (item['单店编码'],item['账号'],item['密码']))
+                    log.error('%s-%s-%s 登录失败！！！' % (item['单店编码'],item['账号'],item['密码']))
                     continue
-            except:
+            except Exception as e:
+                print(e)
                 self.driver.find_element_by_xpath(".//img[@alt='ERP']").click()
-                logger.info('%s-%s-%s 登录成功' % (item['单店编码'], item['账号'], item['密码']))
+                log.info('%s-%s-%s 登录成功' % (item['单店编码'], item['账号'], item['密码']))
                 self.logout()
         # 关闭当前窗口
         self.driver.close()
@@ -115,5 +116,10 @@ class LoginCs(object):
             # 将字典添加到列表中
             e_u_ps.append(eup_dict)
         return e_u_ps
+
+
+if __name__ == '__main__':
+    LoginCs().login1()
+
 
 

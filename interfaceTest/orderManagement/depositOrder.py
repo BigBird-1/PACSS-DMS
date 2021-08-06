@@ -162,6 +162,7 @@ class DepositOrder(object):
             "depositPurchaseTax": int(product_data["directivePrice"]*0.96/1.16*0.075),  # 购置税金额
             "secAssessmentAmount": 0,  # 预估置换车辆价格(含税)
             "shippingAmount": 0,  # 运费
+            "remark": "经甲乙双方友好协商，以上购车金额包含代办客户购买保险（包含意外险项目）、精品（包含加装车翅膀项目）、按揭（蚂蚁上树）、代办客户购买购置税、车船税的全部费用;",
 
             "advisoryServiceAmount": 0,  # 咨询服务费
             "salesDecorationAmount": 0,  # 汽车用品金额
@@ -208,9 +209,9 @@ class DepositOrder(object):
         }
         res = http_r.run_main('post', url=deposit_urls["预订单保存"], data=payload, is_json=1, name="预订单保存")
         order_no = res['data']['orderNo']
-        log.info("{}----购车建议书:{}新增成功!".format(res, order_no))
+        log.info("{}----客户:{}购车建议书:{}新增成功!".format(res, tpc["contactorMobile"], order_no))
 
-        return order_no
+        return order_no, tpc["contactorMobile"]
 
     @staticmethod
     def submit_audit(order_no):
