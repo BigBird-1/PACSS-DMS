@@ -2,7 +2,7 @@ from readConfig import read_config
 
 
 base_url = read_config.get_http("base_url")
-shipping_cars = 1  # 在途车采购数量
+shipping_cars = 10  # 在途车采购数量
 
 globals_urls = {
     "基础参数设置": base_url + "/system/defaultPara/index",

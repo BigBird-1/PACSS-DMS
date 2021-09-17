@@ -65,7 +65,7 @@ class GrossStandard(object):
 gross_standard = GrossStandard()
 
 if __name__ == '__main__':
-    cc = ['YC4569234ZTPX7DSH']
+    cc = ['3LXHU94G7ACFE5D1T']
     dd = ','.join(cc)
     ll = gross_standard.save(dd)
     print(ll)

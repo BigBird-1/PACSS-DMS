@@ -185,8 +185,8 @@ shipping_car = ShippingCar()
 
 if __name__ == '__main__':
     vin_list1, table_json1 = shipping_car.faker_flag()
-    # vin_str1 = ','.join(vin_list1)
-    # shipping_car.new_save(table_json1)
+    vin_str1 = ','.join(vin_list1)
+    shipping_car.new_save(table_json1)
     # shipping_car.to_store(vin_str1)
 
 

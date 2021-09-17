@@ -209,7 +209,7 @@ class SalesOrder(object):
     def submit_audit(so_no):
         data = {"soNo": so_no}
         res = http_r.run_main('post', url=sales_urls["提交审核"], data=data, name="销售订单提交审核")
-        log.info("{}----提交审核 成功".format(res))
+        log.info("{}----{}".format(res, res["data"]["message"]))
 
     @staticmethod
     def dispatch_audit(so_no):

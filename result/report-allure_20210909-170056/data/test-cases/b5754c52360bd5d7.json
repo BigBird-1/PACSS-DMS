@@ -1,0 +1,61 @@
+{
+  "uid" : "b5754c52360bd5d7",
+  "name" : "test_save",
+  "fullName" : "testCase.test_02order.TestOrder#test_save",
+  "historyId" : "be82d48e81c0cbcfd9cf325f420ae95d",
+  "time" : {
+    "start" : 1631178065312,
+    "stop" : 1631178065313,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 6 > 7",
+  "statusTrace" : "self = <testCase.test_02order.TestOrder object at 0x03918810>\n\n    def test_save(self):\n        assert 5 > 4\n>       assert 6 > 7\nE       assert 6 > 7\n\ntestCase\\test_02order.py:13: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_02order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "CPR264"
+  }, {
+    "name" : "thread",
+    "value" : "24224-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testCase.test_02order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b5754c52360bd5d7.json",
+  "parameterValues" : [ ]
+}

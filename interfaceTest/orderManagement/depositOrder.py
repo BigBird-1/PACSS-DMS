@@ -48,7 +48,7 @@ class DepositOrder(object):
                                                            "stockQuantity": "12781001"}}
         res = http_r.run_main('get', url=deposit_urls["配件用品查询"], data=params, name="配件用品查询")
         if res["data"]["total"] == 0:
-            log.error("未查到库存大于0的{}".format(type_desc))
+            log.warning("未查到库存大于0的{}".format(type_desc))
             return
         if y_t > len(res["data"]["list"]):
             y_t = len(res["data"]["list"])
@@ -116,10 +116,11 @@ class DepositOrder(object):
         deposit_amount = res['data']['depositLimit']  # 车价对应订金最低金额
         ct_num = ct_no[:8]
         if ct_code == self.type_dict["机构代码"]:
-            deposit_amount = 0
+            deposit_amount = 0.01
         if ct_code == self.type_dict["居民身份证"]:
             ct_num = ct_no
         # --------------------------------------------------------------------------------------------------------------
+        vehicle_price = int(product_data["directivePrice"]*0.96)  # 车价
         order_data = {
             "id": {"orderNo": ""},
 
@@ -150,7 +151,7 @@ class DepositOrder(object):
             "payMode": 10251002,  # 购买方式* 按揭贷款
             "soldBy": user_id,  # 销售顾问代码*
             "soldByDesc": user_name,  # 销售顾问姓名*
-            "vehiclePrice": int(product_data["directivePrice"]*0.96),  # 车价*
+            "vehiclePrice": vehicle_price,  # 车价*
             "depositAmount": deposit_amount,  # 订金*
             "sheetCreatedBy": user_id,
             "sheetCreatedByDesc": user_name,  # 开单人
@@ -159,7 +160,7 @@ class DepositOrder(object):
             "isPayDeposit": 12781001,  # 是否交预订金
             "useCarAddress": " 用车地址不能为空",  # 用车地址
             "listedCity": city_code,  # 上牌城市
-            "depositPurchaseTax": int(product_data["directivePrice"]*0.96/1.16*0.075),  # 购置税金额
+            "depositPurchaseTax": int(vehicle_price/1.16*0.075),  # 购置税金额
             "secAssessmentAmount": 0,  # 预估置换车辆价格(含税)
             "shippingAmount": 0,  # 运费
             "remark": "经甲乙双方友好协商，以上购车金额包含代办客户购买保险（包含意外险项目）、精品（包含加装车翅膀项目）、按揭（蚂蚁上树）、代办客户购买购置税、车船税的全部费用;",
@@ -177,14 +178,31 @@ class DepositOrder(object):
             "vehicleInsuranceServiceAmount": 1000,  # 车险保险金额
             "syInsuranceAmount": 0,  # 商业险
             "jqInsuranceAmount": 1000,  # 交强险
-            "afterSaleExtAmount": 500,  # 售后延保产品金额
+            "afterSaleExtAmount": 1000,  # 售后延保产品金额
         }
         table_data = []  # 咨询服务方案列表
         if order_data["payMode"] == 10251002:
             order_data["advisoryServiceAmount"] = 500
-            table_data.append({"downPaymentAmount": 100000, "loanAmount": order_data["vehiclePrice"] - 100000,
-                               "loanTimeLimit": 33, "loanInterestRate": "", "monthlyPaymentAmount": 4500,
-                               "closeVehicleHedgeAmount": "", "remark": "咨询方案备注", "loanInterest": 100000})  # 咨询服务方案
+            m_1 = 36
+            m_tax = 0.003
+            t_m = int(vehicle_price*0.7)  # 贷款总金额
+            rule_1 = m_tax * ((1 + m_tax) ** m_1) / ((1 + m_tax) ** m_1 - 1)
+            m_2 = 12
+            m_tax = 0.006
+            rule_2 = m_tax * ((1 + m_tax) ** m_2) / ((1 + m_tax) ** m_2 - 1)
+            table_data.append({"downPaymentAmount": vehicle_price-t_m,  # 首付款金额(元)
+                               "loanAmount": t_m,  # 贷款总金额(元)
+                               "vehicleLoanAmount": int(t_m*0.85),  # 整车贷款金额（元）
+                               "loanTimeLimit": m_1,  # 整车贷款期数(月)
+                               "monthlyPaymentAmount": (t_m*0.85)*rule_1,  # 月供
+                               "addLoanAmount": int(t_m*0.15),  # 附加贷款金额（元）
+                               "addLoanTimeLimit": m_2,  # 附加贷款期数（月）
+                               "addMonthlyPaymentAmount": (t_m*0.15)*rule_2,  # 月供
+                               "loanInterest": (t_m*0.85)*rule_1*m_1+(t_m*0.15)*rule_2*m_2-t_m,  # 贷款利息(元)
+                               "remark": "桃之夭夭 烁烁其华",  # 备注
+
+                               "loanInterestRate": "",
+                               "closeVehicleHedgeAmount": ""})  # 咨询服务方案
         service_item = {
             "addDecorationPartListStr": [],  # 汽车用品(废弃)
             "addLabourServiceListStr": labour_code[:1],  # 劳务
@@ -264,11 +282,11 @@ deposit_order = DepositOrder()
 
 
 if __name__ == '__main__':
-    # oo = deposit_order.new_save("居民身份证", phone="15926096698")
+    oo = deposit_order.new_save("居民身份证", phone="15926096698")
     # deposit_order.submit_audit(oo)
     # deposit_order.order_return("DO2106030001")
     # deposit_order.query("DO2106190002")
-    deposit_order.invalid_order("DO2107160006")
+    # deposit_order.invalid_order("DO2107160006")
 
 
 

@@ -29,7 +29,7 @@ class LoginCs(object):
 
     def logout(self):
         """从主页面退出系统到登录界面"""
-        self.driver.find_element_by_xpath(".//div[@id='exit']/div").click()
+        self.driver.find_element_by_xpath("//span[@class='user-name']").click()
         self.driver.find_element_by_xpath(".//a[@title='退出恒信管理系统']/img[@alt='退出系统']").click()
         sleep(0.5)
         self.driver.switch_to_alert().accept()

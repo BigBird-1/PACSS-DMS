@@ -1,0 +1,3 @@
+[2021-09-09 16:30:01,800] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/initData 购车建议书下拉框初始化-响应时间:0.258037
+[2021-09-09 16:30:02,415] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getInitData 精品查询页面初始化-响应时间:0.232674
+[2021-09-09 16:30:03,188] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyInfo 在途新增页面初始化-响应时间:0.431444

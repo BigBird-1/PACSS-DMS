@@ -1,0 +1,16 @@
+[ {
+  "values" : [ "2.8.0" ],
+  "name" : "allureVersion"
+}, {
+  "values" : [ "3.7.3" ],
+  "name" : "pythonVersion"
+}, {
+  "values" : [ "https://dms.t.hxqcgf.com/" ],
+  "name" : "baseUrl"
+}, {
+  "values" : [ "yang_tao" ],
+  "name" : "author"
+}, {
+  "values" : [ "win7.5" ],
+  "name" : "systemVersion"
+} ]

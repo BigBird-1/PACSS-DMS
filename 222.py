@@ -299,7 +299,7 @@ from datetime import timedelta,datetime
 # b = a.strip()
 # print(b)
 from apscheduler.schedulers.blocking import BlockingScheduler
-from datetime import datetime
+# from datetime import datetime
 
 from pymongo import MongoClient
 from apscheduler.jobstores.memory import MemoryJobStore
@@ -308,8 +308,8 @@ from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
 
 
 # 输出时间
-def job():
-    print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+# def job():
+#     print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 # BlockingScheduler
 
 
@@ -341,21 +341,106 @@ def job():
 # scheduler.add_job(job, 'interval', seconds=5, jobstore='mongo')
 # scheduler.start()
 
-import re
+# import threading
+#
+#
+# ll = ["A08D", "A00Y", "E55E"]
+#
+#
+# def send_request(name):
+#     headers = {
+#         "Authorization": "Basic c2NvOmRtcw==",
+#         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+#     }
+#     params = {
+#         "username": name,
+#         "password": "QLomgFGYMWCiBg953bt8Mw==",
+#         "entitycode": "HD340400",
+#         "isRemember": "true",
+#         "grant_type": "password"
+#     }
+#     url = "https://dms.t.hxqcgf.com/apigateway/auth/oauth/token"
+#     res_dict = requests.get(url, headers=headers, params=params).json()
+#     # print(res_dict, sep="\n")
+#     access_token = res_dict["access_token"]
+#     print(access_token)
+#
+#
+# def test_one(name):
+#     for j in range(10):
+#         send_request(name)
+#
+#
+# threads = []
+# for i in range(len(ll)):
+#     t = threading.Thread(target=test_one, args=(ll[i],), name="T" + str(i))
+#     t.setDaemon(True)
+#     threads.append(t)
+#
+# for t in threads:
+#     t.start()
+#
+# for t in threads:
+#     t.join()
 
 
-str1 = " width: 70px; height: 40px; top: 65px; left: 182px; border-radius: 2px;"
-
-a = re.search(r"left: [\d]+px", str1).group().split(" ")[1][:-2:]
-
-print(a.split(" ")[1][:-2:])
-
-
-print(str1.split(" "))
+# def ll(a, b, c):
+#     print(a*b/(1-c))
+#
+#
+# ll(340.36, 1.13, 0.3)
+import requests
 
 
+headers = {
+        "Authorization": "Basic c2NvOmRtcw==",
+        # "Authorization": "Bearer f47351dc-7804-4511-91d9-18e675be47ac",
+        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+    }
+params = {
+    "username": "A08D",
+    "password": "QLomgFGYMWCiBg953bt8Mw==",
+    "entitycode": "HD340400",
+    "isRemember": "true",
+    "grant_type": "password"
+}
+url = "https://dms.t.hxqcgf.com/apigateway/auth/oauth/token"
+res = requests.get(url, headers=headers, params=params).json()
+token_type = res["token_type"]
+access_token = res["access_token"]
+# 将token放进请求头里
+token = "{} {}".format(token_type, access_token)
+
+headers["Authorization"] = "Bearer 0fd53311-983a-4448-9d58-7f8fccf97e11"
+# headers["Content-Type"] = "application/x-www-form-urlencoded"
 
 
+# url1 = "https://dms.t.hxqcgf.com/apigateway/parts/partStock/getPartStockList"
+# params = {"searchData": {"mainGroupCode": "00", "subGroupCode": "0005", "stockQuantity": 12781002, "subGroupName": "精品"},
+#           "offset": 0, "limit": 20}
+#
+# res = requests.get(url1, params=params, headers=headers).json()
+# print(res)
+# print(headers)
+# list1 = []
+# for i in res["data"]["list"]:
+#     list1.append(i["part_no"])
+#
+# url2 = "https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getPartStockList"
+#
+# params = {
+#         "limit": 1300,
+#         "offset": 0,
+#         "searchData": {"typeCode":99961001}
+# }
+# res = requests.get(url1, params=params, headers=headers).json()
+# list2 = []
+# for i in res["data"]["list"]:
+#     list1.append(i["partNo"])
+# if len(list1) >= len(list2):
+#     for i in list1:
+#         if i not in list2:
+#             print(i)
 
 
 
