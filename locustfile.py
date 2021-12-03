@@ -43,7 +43,11 @@ class BestTestIndexUser(HttpUser):
         }
         params = {
             "username": "A0KP",
+<<<<<<< HEAD
             "password": "QLomgFGYMWCiBg953bt8Mw==",
+=======
+            "password": "MU+nhnWyl54m0ETceVmVCw==",
+>>>>>>> 02354f91b0249b5acacd21e4628835dd826e1fc5
             "entitycode": "HD420610",
             "isRemember": "true",
             "grant_type": "password"

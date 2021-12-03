@@ -4,7 +4,11 @@ import allure
 
 
 @allure.feature('购车建议书模块用例集')
+<<<<<<< HEAD
 class TestOrder1(object):
+=======
+class TestOrder(object):
+>>>>>>> 02354f91b0249b5acacd21e4628835dd826e1fc5
 
     @pytest.fixture()
     def first(self):
@@ -23,4 +27,7 @@ class TestOrder1(object):
 
     def test_submit(self):
         assert 3 < 4
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02354f91b0249b5acacd21e4628835dd826e1fc5
