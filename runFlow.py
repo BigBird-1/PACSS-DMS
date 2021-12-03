@@ -108,8 +108,8 @@ class RunFlow(object):
         """整车采购入库流程"""
         vin_list, table_json = shipping_car.faker_flag(vin)
         vin_str = ','.join(vin_list)
-        shipping_car.new_save(table_json)
-        if sales_params["计算单车资金成本"] == "12781001":
+        flag = shipping_car.new_save(table_json)
+        if sales_params["计算单车资金成本"] == "12781001" and flag == 12781002:
             shipping_car.capital_cost(vin_str)
         se_no = shipping_car.to_store(vin_str)
         self.into_stock("厂家采购入库", vin_str, se_no=se_no)
@@ -217,7 +217,10 @@ class RunFlow(object):
                 return
         log.info("已配车确认 : {}".format(vin))
         settlement_gathering.gathering(so_no)
-        delivery_car.delivery(so_no, vin)
+        y_t = delivery_car.delivery(so_no, vin)
+        if y_t == -1:
+            log.error("交车确认失败")
+            return
         if sales_params["自动出库"] == "12781002":  # 基础参数未勾需要手动出库
             sd_no = out_stock.create_order("销售出库", vin)
             out_stock.out_store(sd_no)
@@ -333,17 +336,17 @@ class RunFlow(object):
 flow = RunFlow()
 
 if __name__ == '__main__':
-    # flow.erp_sales_flow(phone="")
+    flow.erp_sales_flow(phone="")
     # vin_l1 = flow.shipping_flow()
     # flow.transfer_flow("8DJYFS7W4VRAP502H")
     # flow.transfer_return_flow(vin_l1[0])
-    # flow.gross_flow("LFV5A24G9C3015050")
+    # flow.gross_flow("DLRSV2659BM80GE17")
     # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
     # flow.sales_return_flow("SN2107200001")
     # ll = flow.deposit_flow("机构代码", phone="18702750139")  # 15896234582
     # flow.deposit_flow("居民身份证")
-    flow.sales_flow("METHVK1608WB0ZSUL", phone="13545489874")  # 13545489874  13119799049
-    # flow.deposit_return_flow("DO2107200001")
+    # flow.sales_flow("T42RVZ8B1ACJK5G71", phone="13119799049")  # 13545489874  13119799049
+    # flow.deposit_return_flow("DO2109230007")
     # flow.sales_return_flow("SN2109130009")
     # flow.into_stock("采购入库", "JTHB31B14M2078706")
 

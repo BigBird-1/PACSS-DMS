@@ -2,7 +2,7 @@ import pytest
 import requests
 
 
-class TestOrder(object):
+class TestOrder2(object):
 
     @pytest.fixture()
     def first(self):
@@ -20,4 +20,7 @@ class TestOrder(object):
 
     def test_submit(self):
         assert 3 < 4
+
+    def test_delete(self):
+        assert 7 > 6
 

@@ -119,6 +119,18 @@ class DepositOrder(object):
             deposit_amount = 0.01
         if ct_code == self.type_dict["居民身份证"]:
             ct_num = ct_no
+        # -------------------------是否代交车---------------------------------------------------------------------------
+        vin = ""
+        is_deputy_delivery = 12781002
+        if is_deputy_delivery == 12781001:
+            params = {"searchData": {"isDeputyDelivery": 12781001, "isSalesOrder": 12781001}, "offset": 0, "limit": 20}
+            res = http_r.run_main('get', url=deposit_urls["查询代交车"], data=params, name="查询代交车")
+            if res["data"]["total"] == 0:
+                log.warning("没有查到代交车")
+            else:
+                vin = res["data"]["list"][0]
+                product_code = res["data"]["list"][0]["product_code"]
+                product_data = initial.vehicle_main(product_code)
         # --------------------------------------------------------------------------------------------------------------
         vehicle_price = int(product_data["directivePrice"]*0.96)  # 车价
         order_data = {
@@ -156,7 +168,7 @@ class DepositOrder(object):
             "sheetCreatedBy": user_id,
             "sheetCreatedByDesc": user_name,  # 开单人
             "sheetCreateDate": current_date,  # 开单日期
-            "vin": "",
+            "vin": vin,
             "isPayDeposit": 12781001,  # 是否交预订金
             "useCarAddress": " 用车地址不能为空",  # 用车地址
             "listedCity": city_code,  # 上牌城市

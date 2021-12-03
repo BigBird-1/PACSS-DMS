@@ -92,6 +92,8 @@ class DeliveryCar(object):
             "paramJson": param_json}
         res = http_r.run_main('post', url=delivery_urls["车辆返利保存"], data=data, name="车辆返利保存")
         log.info(res)
+        if res["data"]["code"] == -1:
+            return -1
 
 
 delivery_car = DeliveryCar()

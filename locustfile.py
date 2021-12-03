@@ -42,13 +42,13 @@ class BestTestIndexUser(HttpUser):
             "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
         }
         params = {
-            "username": "A08D",
+            "username": "A0KP",
             "password": "QLomgFGYMWCiBg953bt8Mw==",
-            "entitycode": "HD340400",
+            "entitycode": "HD420610",
             "isRemember": "true",
             "grant_type": "password"
         }
-        url = "https://dms.t.hxqcgf.com/apigateway/auth/oauth/token"
+        url = "https://dms.hxqcgf.com/apigateway/auth/oauth/token"
         res = self.client.get(url, headers=headers, params=params)
         # print(res_dict, sep="\n")
 
@@ -58,7 +58,7 @@ class BestTestIndexUser(HttpUser):
 
 if __name__ == '__main__':
     import os
-    os.system("locust -f locustfile.py --host=https://dms.t.hxqcgf.com")
+    # os.system("locust -f locustfile.py --host=https://dms.hxqcgf.com")
 
 
 

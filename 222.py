@@ -389,29 +389,29 @@ from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
 #
 #
 # ll(340.36, 1.13, 0.3)
-import requests
-
-
-headers = {
-        "Authorization": "Basic c2NvOmRtcw==",
-        # "Authorization": "Bearer f47351dc-7804-4511-91d9-18e675be47ac",
-        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-    }
-params = {
-    "username": "A08D",
-    "password": "QLomgFGYMWCiBg953bt8Mw==",
-    "entitycode": "HD340400",
-    "isRemember": "true",
-    "grant_type": "password"
-}
-url = "https://dms.t.hxqcgf.com/apigateway/auth/oauth/token"
-res = requests.get(url, headers=headers, params=params).json()
-token_type = res["token_type"]
-access_token = res["access_token"]
-# 将token放进请求头里
-token = "{} {}".format(token_type, access_token)
-
-headers["Authorization"] = "Bearer 0fd53311-983a-4448-9d58-7f8fccf97e11"
+# import requests
+#
+#
+# headers = {
+#         "Authorization": "Basic c2NvOmRtcw==",
+#         # "Authorization": "Bearer f47351dc-7804-4511-91d9-18e675be47ac",
+#         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+#     }
+# params = {
+#     "username": "A08D",
+#     "password": "QLomgFGYMWCiBg953bt8Mw==",
+#     "entitycode": "HD340400",
+#     "isRemember": "true",
+#     "grant_type": "password"
+# }
+# url = "https://dms.t.hxqcgf.com/apigateway/auth/oauth/token"
+# res = requests.get(url, headers=headers, params=params).json()
+# token_type = res["token_type"]
+# access_token = res["access_token"]
+# # 将token放进请求头里
+# token = "{} {}".format(token_type, access_token)
+#
+# headers["Authorization"] = "Bearer 0fd53311-983a-4448-9d58-7f8fccf97e11"
 # headers["Content-Type"] = "application/x-www-form-urlencoded"
 
 
@@ -441,7 +441,6 @@ headers["Authorization"] = "Bearer 0fd53311-983a-4448-9d58-7f8fccf97e11"
 #     for i in list1:
 #         if i not in list2:
 #             print(i)
-
 
 
 

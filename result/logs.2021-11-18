@@ -1,0 +1,167 @@
+[2021-11-17 16:30:25,184] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/salesDepositOrder/initData 购车建议书下拉框初始化-响应时间:0.614202
+[2021-11-17 16:30:26,112] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getInitData 精品查询页面初始化-响应时间:0.366397
+[2021-11-17 16:30:30,063] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyInfo 在途新增页面初始化-响应时间:3.429684
+[2021-11-17 16:30:31,265] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/initData 车辆入库下拉初始化-响应时间:0.301587
+[2021-11-17 16:30:32,311] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.076854
+[2021-11-17 16:30:32,806] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.095609
+[2021-11-17 16:30:33,809] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/salesOrder/initData 销售订单列表下拉初始化-响应时间:0.615919
+[2021-11-17 16:30:34,539] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/salesOrderReturn/initData 销售退回新建页面初始化-响应时间:0.254536
+[2021-11-17 16:30:35,294] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/transferOrder/initData 调拨订单新增initData-响应时间:0.299783
+[2021-11-17 16:30:35,823] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.071367
+[2021-11-17 16:30:36,260] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.120258
+[2021-11-17 16:30:36,937] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vehicleOutStock/initData 车辆出库initData-响应时间:0.270846
+[2021-11-17 16:30:40,956] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/system/defaultPara/index 基础参数设置查询-index-响应时间:0.998971
+[2021-11-17 16:30:41,343] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.106084
+[2021-11-17 16:30:41,348] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-17 16:30:41,801] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.094417
+[2021-11-17 16:30:41,802] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-17 16:30:42,197] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.105167
+[2021-11-17 16:30:42,199] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-17 16:30:42,627] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.122228
+[2021-11-17 16:30:42,679] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-17 16:30:43,144] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.122584
+[2021-11-17 16:30:43,144] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-17 16:30:44,278] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/checkExsitInStock 是否存在库存-响应时间:0.82436
+[2021-11-17 16:30:44,284] shippingCar->line:49 [INFO]:{'code': 200, 'message': None, 'data': {'vsStock': None, 'isInSo': False}}
+[2021-11-17 16:30:45,046] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.390386
+[2021-11-17 16:30:45,430] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTransitDays 标准在途天数-响应时间:0.093976
+[2021-11-17 16:30:45,845] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTurnoverDays 标准周转天数-响应时间:0.093736
+[2021-11-17 16:31:04,491] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getProductList 获取动力类型-响应时间:18.369468
+[2021-11-17 16:31:05,839] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotify 在途车保存-响应时间:0.973476
+[2021-11-17 16:31:05,841] shippingCar->line:131 [INFO]:在途车新增保存:{'code': 200, 'message': None, 'data': {'msg': '', 'success': True}}---[{'vin': 'KDPSR7LM552G9VCE4', 'engineNo': 'EQ8100Q1KDPSR', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'FXLWC4E531YSU207T', 'engineNo': 'EQ8100Q1FXLWC', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'HWUBZLCJ99S487Y21', 'engineNo': 'EQ8100Q1HWUBZ', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'M2DB7PGF9TU8AZX3V', 'engineNo': 'EQ8100Q1M2DB7', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'J9CWYF3U85TS8LK7G', 'engineNo': 'EQ8100Q1J9CWY', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}]---采购价:542800
+[2021-11-17 16:31:06,753] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyList 在途车辆管理列表查询-响应时间:0.542218
+[2021-11-17 16:31:06,758] shippingCar->line:157 [INFO]:在途列表查询: 5
+[2021-11-17 16:31:07,457] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getCapitalCostList 获取资金成本规则-响应时间:0.303465
+[2021-11-17 16:31:07,940] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/getVehCostRuleById 获取指定资金成本-响应时间:0.138188
+[2021-11-17 16:31:08,473] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotifyCaptialCost 资金成本设置保存-响应时间:0.187997
+[2021-11-17 16:31:08,478] shippingCar->line:200 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--资金成本设置-资金规则:中信银行武汉分行银票
+[2021-11-17 16:31:09,391] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/shippingNotify/commitShippingNotifyToStore 在途车转入库-响应时间:0.631121
+[2021-11-17 16:31:09,393] shippingCar->line:146 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '入库成功！', 'seNo': 'VD2111170001', 'success': True}}--KDPSR7LM552G9VCE4,FXLWC4E531YSU207T,HWUBZLCJ99S487Y21,M2DB7PGF9TU8AZX3V,J9CWYF3U85TS8LK7G转入库单,入库单号:VD2111170001
+[2021-11-17 16:31:09,830] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.152808
+[2021-11-17 16:31:10,328] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.15901
+[2021-11-17 16:31:10,796] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.151948
+[2021-11-17 16:31:11,542] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.135068
+[2021-11-17 16:31:12,825] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/saveCheckOneCarAll 批量验收保存-响应时间:0.944121
+[2021-11-17 16:31:12,828] vehiclesStockEntry->line:54 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--KDPSR7LM552G9VCE4,FXLWC4E531YSU207T,HWUBZLCJ99S487Y21,M2DB7PGF9TU8AZX3V,J9CWYF3U85TS8LK7G 验收通过
+[2021-11-17 16:31:13,999] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/postBatchAudit 车辆入库提交审核-响应时间:0.851115
+[2021-11-17 16:31:14,000] vehiclesStockEntry->line:65 [INFO]:{'code': 200, 'message': None, 'data': {'messageCode': 1}},KDPSR7LM552G9VCE4,FXLWC4E531YSU207T,HWUBZLCJ99S487Y21,M2DB7PGF9TU8AZX3V,J9CWYF3U85TS8LK7G 提交审核成功
+[2021-11-17 16:31:21,080] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.130572
+[2021-11-17 16:31:21,945] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.110153
+[2021-11-17 16:31:24,880] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:2.627334
+[2021-11-17 16:31:24,881] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:27,030] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.817864
+[2021-11-17 16:31:27,032] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:29,044] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.743468
+[2021-11-17 16:31:29,046] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:31,404] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:2.075012
+[2021-11-17 16:31:31,406] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:33,481] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.758587
+[2021-11-17 16:31:33,483] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:35,470] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.759235
+[2021-11-17 16:31:35,471] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:37,799] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.99272
+[2021-11-17 16:31:37,799] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:39,776] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.665432
+[2021-11-17 16:31:39,776] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:41,783] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.686696
+[2021-11-17 16:31:41,785] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:43,615] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.538236
+[2021-11-17 16:31:43,615] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:45,636] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.70932
+[2021-11-17 16:31:45,638] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:47,521] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.594084
+[2021-11-17 16:31:47,523] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:49,464] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.680336
+[2021-11-17 16:31:49,467] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:51,347] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.537385
+[2021-11-17 16:31:51,348] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:53,443] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.739979
+[2021-11-17 16:31:53,444] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:55,519] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.78969
+[2021-11-17 16:31:55,519] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:57,404] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.587331
+[2021-11-17 16:31:57,404] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:31:59,364] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.645414
+[2021-11-17 16:31:59,365] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:01,302] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.607755
+[2021-11-17 16:32:01,304] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:03,361] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.70081
+[2021-11-17 16:32:03,364] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:05,392] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.739043
+[2021-11-17 16:32:05,394] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:07,217] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.573199
+[2021-11-17 16:32:07,220] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:09,161] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.63341
+[2021-11-17 16:32:09,163] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:10,996] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.547718
+[2021-11-17 16:32:10,998] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:12,889] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.584465
+[2021-11-17 16:32:12,895] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:14,854] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.670007
+[2021-11-17 16:32:14,855] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:16,865] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.687191
+[2021-11-17 16:32:16,867] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:18,766] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.586127
+[2021-11-17 16:32:18,767] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:21,220] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:2.110915
+[2021-11-17 16:32:21,223] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:23,167] configHttp->line:18 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.59969
+[2021-11-17 16:32:23,168] wfsAudit->line:46 [INFO]:代办事项查询结果: 0
+[2021-11-17 16:32:23,176] wfsAudit->line:58 [ERROR]:代办事项里查不到数据
+[2021-11-17 16:32:23,603] configHttp->line:26 [INFO]:https://dms.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.157765
+[2021-11-18 09:27:46,015] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/initData 购车建议书下拉框初始化-响应时间:0.250566
+[2021-11-18 09:27:46,543] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getInitData 精品查询页面初始化-响应时间:0.209134
+[2021-11-18 09:27:47,315] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyInfo 在途新增页面初始化-响应时间:0.436632
+[2021-11-18 09:27:47,852] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/initData 车辆入库下拉初始化-响应时间:0.222644
+[2021-11-18 09:27:48,214] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.063461
+[2021-11-18 09:27:48,598] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.078087
+[2021-11-18 09:27:49,145] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/initData 销售订单列表下拉初始化-响应时间:0.280304
+[2021-11-18 09:27:49,688] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderReturn/initData 销售退回新建页面初始化-响应时间:0.248655
+[2021-11-18 09:27:50,294] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/transferOrder/initData 调拨订单新增initData-响应时间:0.293956
+[2021-11-18 09:27:50,907] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.134249
+[2021-11-18 09:27:51,608] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.070214
+[2021-11-18 09:27:52,156] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleOutStock/initData 车辆出库initData-响应时间:0.198406
+[2021-11-18 09:27:54,381] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/system/defaultPara/index 基础参数设置查询-index-响应时间:1.558199
+[2021-11-18 09:27:54,761] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.061835
+[2021-11-18 09:27:54,761] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-18 09:27:55,095] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.067309
+[2021-11-18 09:27:55,096] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-18 09:27:55,486] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.07242
+[2021-11-18 09:27:55,486] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-18 09:27:55,830] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.061307
+[2021-11-18 09:27:55,830] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-18 09:27:56,154] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.057866
+[2021-11-18 09:27:56,154] shippingCar->line:37 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2021-11-18 09:27:56,940] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkExsitInStock 是否存在库存-响应时间:0.510248
+[2021-11-18 09:27:56,940] shippingCar->line:49 [INFO]:{'code': 200, 'message': None, 'data': {'vsStock': None, 'isInSo': False}}
+[2021-11-18 09:27:57,800] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.552798
+[2021-11-18 09:27:58,203] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTransitDays 标准在途天数-响应时间:0.088725
+[2021-11-18 09:27:58,558] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTurnoverDays 标准周转天数-响应时间:0.084366
+[2021-11-18 09:28:09,843] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getProductList 获取动力类型-响应时间:11.01103
+[2021-11-18 09:28:11,548] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotify 在途车保存-响应时间:1.417057
+[2021-11-18 09:28:11,548] shippingCar->line:131 [INFO]:在途车新增保存:{'code': 200, 'message': None, 'data': {'msg': '', 'success': True}}---[{'vin': 'PUC1HTZM32AKRVG80', 'engineNo': 'EQ8100Q1PUC1H', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'H8TWJXAK9957ZERGY', 'engineNo': 'EQ8100Q1H8TWJ', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': '9U2S58B14RGMXAVCF', 'engineNo': 'EQ8100Q19U2S5', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'MWJGUTLY1S6KVCPXD', 'engineNo': 'EQ8100Q1MWJGU', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}, {'vin': 'TBSPERAD4X24YZ6MF', 'engineNo': 'EQ8100Q1TBSPE', 'certificateNumber': 'SQ67IJ692', 'fakeFlag': 12781002, 'fakeDate': ''}]---采购价:624232
+[2021-11-18 09:28:12,583] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/commitShippingNotifyToStore 在途车转入库-响应时间:0.730137
+[2021-11-18 09:28:12,584] shippingCar->line:146 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '入库成功！', 'seNo': 'VD2111180001', 'success': True}}--PUC1HTZM32AKRVG80,H8TWJXAK9957ZERGY,9U2S58B14RGMXAVCF,MWJGUTLY1S6KVCPXD,TBSPERAD4X24YZ6MF转入库单,入库单号:VD2111180001
+[2021-11-18 09:28:13,023] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.117351
+[2021-11-18 09:28:13,390] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.093945
+[2021-11-18 09:28:13,733] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.069657
+[2021-11-18 09:28:14,078] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.060561
+[2021-11-18 09:28:15,054] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/saveCheckOneCarAll 批量验收保存-响应时间:0.704893
+[2021-11-18 09:28:15,054] vehiclesStockEntry->line:54 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--PUC1HTZM32AKRVG80,H8TWJXAK9957ZERGY,9U2S58B14RGMXAVCF,MWJGUTLY1S6KVCPXD,TBSPERAD4X24YZ6MF 验收通过
+[2021-11-18 09:28:16,358] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/postBatchAudit 车辆入库提交审核-响应时间:1.012065
+[2021-11-18 09:28:16,358] vehiclesStockEntry->line:65 [INFO]:{'code': 200, 'message': None, 'data': {'messageCode': 1}},PUC1HTZM32AKRVG80,H8TWJXAK9957ZERGY,9U2S58B14RGMXAVCF,MWJGUTLY1S6KVCPXD,TBSPERAD4X24YZ6MF 提交审核成功
+[2021-11-18 09:28:21,717] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.07716
+[2021-11-18 09:28:22,078] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.087215
+[2021-11-18 09:28:22,835] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:0.47411
+[2021-11-18 09:28:22,835] wfsAudit->line:46 [INFO]:代办事项查询结果: 1
+[2021-11-18 09:28:22,835] wfsAudit->line:55 [INFO]:billType:车辆采购入库 billCode:BI202111180931534F769D4 taskCode:TK202005151078
+[2021-11-18 09:28:23,208] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.073421
+[2021-11-18 09:28:23,544] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.06707
+[2021-11-18 09:28:23,545] wfsAudit->line:71 [INFO]:---当前订单所有审核节点['子公司财务经理']
+[2021-11-18 09:28:23,904] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.082639
+[2021-11-18 09:28:23,904] wfsAudit->line:118 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2021-11-18 09:28:25,384] configHttp->line:18 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.197079
+[2021-11-18 09:28:25,384] wfsAudit->line:213 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司财务经理, 审核已终结
+[2021-11-18 09:28:30,742] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.075972
+[2021-11-18 09:28:31,081] configHttp->line:26 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.073731
+[2021-11-18 09:28:31,083] runFlow->line:65 [INFO]:车辆已入库:PUC1HTZM32AKRVG80,H8TWJXAK9957ZERGY,9U2S58B14RGMXAVCF,MWJGUTLY1S6KVCPXD,TBSPERAD4X24YZ6MF -----(入库完成)-----

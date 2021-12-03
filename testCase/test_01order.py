@@ -4,7 +4,7 @@ import allure
 
 
 @allure.feature('购车建议书模块用例集')
-class TestOrder(object):
+class TestOrder1(object):
 
     @pytest.fixture()
     def first(self):

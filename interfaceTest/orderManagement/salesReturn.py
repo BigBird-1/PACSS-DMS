@@ -28,7 +28,8 @@ class SalesReturn(object):
         return y_t
 
     def new_save(self, old_no=""):
-        params = {"limit": 20, "offset": 0, "searchData": {"soStatus": "", "cancelType": 13001001, "keyWord": old_no}}
+        params = {"limit": 20, "offset": 0, "searchData": {"soStatus": "", "cancelType": "13001001,13001008",
+                                                           "keyWord": old_no}}
         res = http_r.run_main('get', url=sales_return_urls["新建销售退回列表查询"], data=params, name="新建销售退回列表查询")
         if res["data"]["total"] == 0:
             log.info("没有可供退回的销售订单")

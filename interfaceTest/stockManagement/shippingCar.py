@@ -56,14 +56,21 @@ class ShippingCar(object):
         purchase_price = int(product_data["directivePrice"]*0.92)
         no_tax_vehicle_cost = purchase_price / (1 + self.tax)
         tax_amount = purchase_price - no_tax_vehicle_cost
-        # -----------------平均在途,周转天数----------------------------------------------------------------------------
+        # -----------------获取平均在途,周转天数----------------------------------------------------------------------------
         params = {
             "productCode": product_data["productCode"]}
         res2 = http_r.run_main('get', url=shipping_urls["标准在途天数"], data=params, name="标准在途天数")
         avg_transit = res2["data"]["avgTransitDays"]
         res3 = http_r.run_main('get', url=shipping_urls["标准周转天数"], data=params, name="标准周转天数")
         avg_turnover = res3["data"]["avgTurnoverDays"]
+        # ------------------获取动力类型--------------------------------------------------------------------------------
+        params = {
+            "searchData": {"productCode": product_data["productCode"]}
+        }
+        res = http_r.run_main('get', url=shipping_urls["获取动力类型"], data=params, name="获取动力类型")
+        power_type = res["data"]["list"][0]["children"][0]["powerType"]
         # --------------构造请求数据------------------------------------------------------------------------------------
+        is_deputy_delivery = 12781002  # 是否代交车
         data = {
             "paramJson": {"businessType": 13071002,  # 业务类型*
                           "vendorCode": "888888888888",  # 供应商代码*
@@ -83,10 +90,13 @@ class ShippingCar(object):
                           "avgTransitDays": avg_transit,  # 标准在途天数
                           "avgTurnoverDays": avg_turnover,  # 标准周转天数
 
-                          "standardCommission": 25846,  # 提车佣金
+                          "standardCommission": product_data["directivePrice"]*0.03,  # 提车佣金
                           "deliveryCommission": 0,
 
                           "realOemPickUpDate": current_date + "T16:00:00.000Z",
+
+                          "isDeputyDelivery": is_deputy_delivery,  # 是否代交车
+                          "powerType": power_type,  # 动力类型(99951001纯电动, 99951002燃油, 99951003混动)
 
                           "id": {"entityCode": "", "vin": ""},
                           "sourceCode": "1002",  # 资金来源*
@@ -106,11 +116,21 @@ class ShippingCar(object):
             "deliveryCommission": 0,  # 标准交车佣金
             "isAdd": "true"
         }
-        for key in list(data["paramJson"].keys()):
-            if not data["paramJson"][key]:
-                del data["paramJson"][key]
+        if is_deputy_delivery == 12781001:
+            data["paramJson"]["sourceCode"] = ""
+            data["paramJson"]["sourceCodeDesc"] = ""
+            data["paramJson"]["purchasePrice"] = 0
+            data["paramJson"]["notaxVehicleCost"] = 0
+            data["paramJson"]["taxAmount"] = 0
+        if data["paramJson"]["powerType"] == 99951001:
+            data["paramJson"]["dischargeStandard"] = ""
+        # for key in list(data["paramJson"].keys()):
+        #     if not data["paramJson"][key]:
+        #         del data["paramJson"][key]
         res = http_r.run_main("post", url=shipping_urls["在途车保存"], data=data, name="在途车保存")
         log.info("在途车新增保存:{}---{}---采购价:{}".format(res, table_json, purchase_price))
+
+        return is_deputy_delivery
 
     @staticmethod
     def to_store(vin_str):

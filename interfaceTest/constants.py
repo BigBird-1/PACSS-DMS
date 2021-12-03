@@ -27,6 +27,7 @@ deposit_urls = {
     "配件用品查询": base_url + "/report/salesOrderFeignUtils/getPartStockList",
     "衍生服务险list": base_url + "/valueadded/vehicleExtension/api/getGmsExtPackageList",
     "精品查询页面初始化": base_url + "/report/salesOrderFeignUtils/getInitData",
+    "查询代交车": base_url + "/sales/salesOrder/queryVinInfo",
 
     "检查身份证信息": base_url + "/gms/idCardInfo/checkIdCardInfo",
     "老单据": base_url + "/sales/salesDepositOrder/isOldOrderNo",
@@ -54,6 +55,7 @@ shipping_urls = {
     "标准周转天数": base_url + "/sales/shippingNotify/getAvgTurnoverDays",
     "在途车保存": base_url + "/sales/shippingNotify/saveShippingNotify",
     "在途车辆管理列表查询": base_url + "/sales/shippingNotify/getShippingNotifyList",
+    "获取动力类型": base_url + "/report/salesOrderFeignUtils/getProductList",
 
     "获取资金成本规则": base_url + "/sales/shippingNotify/getCapitalCostList",
     "获取指定资金成本": base_url + "/sales/shippingNotify/getVehCostRuleById",
@@ -157,6 +159,12 @@ gathering_urls = {
     "新增收款页": base_url + "/sales/selesSettlement/toCustomerGatheringPage",
     "收款保存": base_url + "/sales/selesSettlement/save",
     "结算收款列表查询": base_url + "/sales/selesSettlement/list",
+}
+
+car_inventory_urls = {
+    "新增盘点单": base_url + "/sales/carInventory/addCarInventory",
+    "差异情况说明-查看": base_url + "/sales/differenceInventory/toInventoryDiffExplain",
+    "差异情况说明-保存": base_url + "/sales/differenceInventory/saveOrUpdateInventoryExplain",
 }
 
 wfs_urls = {
