@@ -43,7 +43,6 @@ class AllTest(object):
     #         if 'json' in i:
     #             os.remove('{}/{}'.format(self.json_path, i))
 
-
     def run(self):
         self.set_case_list()
         for case_model in self.case_list:  # 从case_list元素组中循环取出case
@@ -52,14 +51,13 @@ class AllTest(object):
 
             pytest.main(['-s', '--alluredir=allure-results', '{}'.format(case)])
 
-            os.system("pytest -s {} --alluredir={}".format(case, self.json_path))
+            # os.system("pytest -s {} --alluredir={}".format(case, self.json_path))
             # pytest.main(['-s', '--alluredir', 'allure-results', '{}'.format(case), '--clean-allure'])
 
-        os.system('allure generate {} -o {}'.format(self.json_path, self.html_path))
-        for i in os.listdir(self.json_path):
-            if 'json' in i:
-                os.remove('{}/{}'.format(self.json_path, i))
-
+        # os.system('allure generate {} -o {}'.format(self.json_path, self.html_path))
+        # for i in os.listdir(self.json_path):
+        #     if 'json' in i:
+        #         os.remove('{}/{}'.format(self.json_path, i))
 
 
 if __name__ == '__main__':
