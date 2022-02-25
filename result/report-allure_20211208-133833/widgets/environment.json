@@ -1,0 +1,25 @@
+[ {
+  "values" : [ "======" ],
+  "name" : ""
+}, {
+  "values" : [ "2.8.0" ],
+  "name" : "allureVersion"
+}, {
+  "values" : [ "3.7.3" ],
+  "name" : "pythonVersion"
+}, {
+  "values" : [ "https://dms.t.hxqcgf.com/" ],
+  "name" : "baseUrl"
+}, {
+  "values" : [ "yang_tao" ],
+  "name" : "author"
+}, {
+  "values" : [ "02354f91b0249b5acacd21e4628835dd826e1fc5" ],
+  "name" : ">>>>>>>"
+}, {
+  "values" : [ "win7.5" ],
+  "name" : "systemVersion"
+}, {
+  "values" : [ "HEAD" ],
+  "name" : "<<<<<<<"
+} ]

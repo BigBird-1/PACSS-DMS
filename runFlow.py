@@ -12,6 +12,7 @@ from interfaceTest.wfsAudit import to_do
 from interfaceTest.salesSettlement.advancePayment import advance_payment
 from interfaceTest.salesSettlement.settlementGathering import settlement_gathering
 from interfaceTest.initialization import initial
+from interfaceTest.constants import is_deputy_delivery
 from common import Log
 import readConfig
 from common.configEmail import SendEmail
@@ -76,6 +77,7 @@ class RunFlow(object):
             if vehicle_info["auditStatusName"] == "审核中":
                 to_do.audit_flow(vin)
                 vehicle_info = out_stock.query_order(vin=vin, flag=flag)  # 审核完再查一次
+                time.sleep(5)
                 if vehicle_info["auditStatusName"] == "审核中":
                     log.info("出库审核通过后状态未改变,ERP还是审核中: {}".format(vin))
                     return
@@ -106,10 +108,9 @@ class RunFlow(object):
 
     def shipping_flow(self, vin=None):
         """整车采购入库流程"""
-        vin_list, table_json = shipping_car.faker_flag(vin)
+        vin_list = shipping_car.new_save(vin)
         vin_str = ','.join(vin_list)
-        flag = shipping_car.new_save(table_json)
-        if sales_params["计算单车资金成本"] == "12781001" and flag == 12781002:
+        if sales_params["计算单车资金成本"] == "12781001" and is_deputy_delivery == 12781002:
             shipping_car.capital_cost(vin_str)
         se_no = shipping_car.to_store(vin_str)
         self.into_stock("厂家采购入库", vin_str, se_no=se_no)
@@ -302,9 +303,11 @@ class RunFlow(object):
                 return
         elif order_info["soStatus"] == "审核驳回":
             return
-        # --------------审核通过后--------------------------------------------------------------------------------------
-        if sales_params["调拨退回订单审核通过自动入库"] == "12781002":
+        elif order_info["soStatus"] == "等待退回入库":
             self.into_stock("调拨退回入库", vin)
+        # --------------审核通过后--------------------------------------------------------------------------------------
+        # if sales_params["调拨退回订单审核通过自动入库"] == "12781002":
+        #     self.into_stock("调拨退回入库", vin)
         log.info("车辆已入库:{},-----(调拨退回订单已完成:{})-----".format(vin, so_no))
 
     def erp_sales_flow(self, phone=""):
@@ -336,16 +339,16 @@ class RunFlow(object):
 flow = RunFlow()
 
 if __name__ == '__main__':
-    flow.erp_sales_flow(phone="")
-    # vin_l1 = flow.shipping_flow()
-    # flow.transfer_flow("8DJYFS7W4VRAP502H")
-    # flow.transfer_return_flow(vin_l1[0])
-    # flow.gross_flow("DLRSV2659BM80GE17")
+    # flow.erp_sales_flow(phone="")
+    vin_l1 = flow.shipping_flow()
+    # flow.transfer_flow("ADZ7W3VY3RUEB96CF")
+    # flow.transfer_return_flow("98DZTWGR8YPASJHVC")
+    flow.gross_flow(vin_l1[0])
     # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
     # flow.sales_return_flow("SN2107200001")
     # ll = flow.deposit_flow("机构代码", phone="18702750139")  # 15896234582
     # flow.deposit_flow("居民身份证")
-    # flow.sales_flow("T42RVZ8B1ACJK5G71", phone="13119799049")  # 13545489874  13119799049
+    flow.sales_flow(vin_l1[0], phone="15007192223")  # 13545489874  13119799049
     # flow.deposit_return_flow("DO2109230007")
     # flow.sales_return_flow("SN2109130009")
     # flow.into_stock("采购入库", "JTHB31B14M2078706")

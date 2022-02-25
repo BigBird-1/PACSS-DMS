@@ -36,7 +36,7 @@ class AllTest(object):
     #     for case_model in self.case_list:  # 从case_list元素组中循环取出case
     #         print(case_model + '.py')  # 打印出取出来的名称
     #         case = os.path.join(case_path, '{}.py'.format(case_model))
-    #         os.system("pytest -s {} --alluredir={}".format(case, self.json_path))
+    #         pytest.main(['-s', '{}'.format(case), '--alluredir={}'.format(self.json_path)])
     #
     #     os.system('allure generate {} -o {}'.format(self.json_path, self.html_path))
     #     for i in os.listdir(self.json_path):
@@ -50,14 +50,6 @@ class AllTest(object):
             case = os.path.join(case_path, '{}.py'.format(case_model))
 
             pytest.main(['-s', '--alluredir=allure-results', '{}'.format(case)])
-
-            # os.system("pytest -s {} --alluredir={}".format(case, self.json_path))
-            # pytest.main(['-s', '--alluredir', 'allure-results', '{}'.format(case), '--clean-allure'])
-
-        # os.system('allure generate {} -o {}'.format(self.json_path, self.html_path))
-        # for i in os.listdir(self.json_path):
-        #     if 'json' in i:
-        #         os.remove('{}/{}'.format(self.json_path, i))
 
 
 if __name__ == '__main__':

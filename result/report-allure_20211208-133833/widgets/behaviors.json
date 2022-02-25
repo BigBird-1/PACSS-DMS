@@ -1,0 +1,15 @@
+{
+  "total" : 5,
+  "items" : [ {
+    "uid" : "b4082f560192267b0e8081c1c6c8e6fe",
+    "name" : "购车建议书模块用例集",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    }
+  } ]
+}

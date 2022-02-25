@@ -1,7 +1,0 @@
-"Status","Name","Duration in ms","Description"
-"passed","testCase.test_02order.TestOrder#test_save","1",""
-"failed","testCase.test_01order.TestOrder#test_save","0",""
-"passed","testCase.test_02order.TestOrder#test_query","2111",""
-"passed","testCase.test_01order.TestOrder#test_query","2396","登录token状态码验证"
-"passed","testCase.test_02order.TestOrder#test_submit","0",""
-"passed","testCase.test_01order.TestOrder#test_submit","1",""

@@ -113,4 +113,4 @@ stock_entry = VehiclesStockEntry()
 
 
 if __name__ == '__main__':
-    stock_entry.rebate_confirm("VD2011270003")
+    stock_entry.in_store("VD2202180003", "YP04V3MF117HCRE9A")

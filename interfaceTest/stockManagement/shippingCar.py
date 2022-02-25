@@ -4,7 +4,7 @@ import random
 from dataGenerated import randomData
 from common.configHttp import http_r
 from interfaceTest.initialization import initial
-from interfaceTest.constants import shipping_urls, shipping_cars
+from interfaceTest.constants import shipping_urls, shipping_cars, is_deputy_delivery
 from readConfig import read_config
 from common import Log
 
@@ -21,7 +21,7 @@ class ShippingCar(object):
         self.tax = res1['data']['tax']
 
     @staticmethod
-    def faker_flag(vin=None):
+    def faker_flag(vin):
         vin_list = []
         table_json = []
         if vin:
@@ -49,14 +49,15 @@ class ShippingCar(object):
         log.info(res)
         return vin_list, table_json
 
-    def new_save(self, table_json):
+    def new_save(self, vin):
+        vin_list, table_json = self.faker_flag(vin)
         product_data = initial.vehicle_main(read_config.get_http("productCode"))  # 产品代码
         # product_data = initial.vehicle_main("FPZ-008339 FWS-001402 FNS-000046")  # 产品代码
         # -----------采购价格，税率，不含税采购价，税额-----------------------------------------------------------------
         purchase_price = int(product_data["directivePrice"]*0.92)
         no_tax_vehicle_cost = purchase_price / (1 + self.tax)
         tax_amount = purchase_price - no_tax_vehicle_cost
-        # -----------------获取平均在途,周转天数----------------------------------------------------------------------------
+        # -----------------获取平均在途,周转天数------------------------------------------------------------------------
         params = {
             "productCode": product_data["productCode"]}
         res2 = http_r.run_main('get', url=shipping_urls["标准在途天数"], data=params, name="标准在途天数")
@@ -70,7 +71,6 @@ class ShippingCar(object):
         res = http_r.run_main('get', url=shipping_urls["获取动力类型"], data=params, name="获取动力类型")
         power_type = res["data"]["list"][0]["children"][0]["powerType"]
         # --------------构造请求数据------------------------------------------------------------------------------------
-        is_deputy_delivery = 12781002  # 是否代交车
         data = {
             "paramJson": {"businessType": 13071002,  # 业务类型*
                           "vendorCode": "888888888888",  # 供应商代码*
@@ -112,7 +112,7 @@ class ShippingCar(object):
                           "certificateLocated": "台湾省",  # 合格证所在地
                           "poNo": ""},  # 采购计划单号
             "tableJson": table_json,
-            "standardCommission": 25846,  # 标准提车佣金
+            "standardCommission": product_data["directivePrice"]*0.03,  # 标准提车佣金
             "deliveryCommission": 0,  # 标准交车佣金
             "isAdd": "true"
         }
@@ -130,7 +130,15 @@ class ShippingCar(object):
         res = http_r.run_main("post", url=shipping_urls["在途车保存"], data=data, name="在途车保存")
         log.info("在途车新增保存:{}---{}---采购价:{}".format(res, table_json, purchase_price))
 
-        return is_deputy_delivery
+        return vin_list
+
+    @staticmethod
+    def delete_car(vin):
+        """删除在途车"""
+        data = {"vin": vin}
+        res = http_r.run_main("post", url=shipping_urls["在途车删除"], data=data, name="在途车删除")
+        msg = res["data"]["msg"]
+        log.info("{}-{}".format(vin, msg))
 
     @staticmethod
     def to_store(vin_str):
@@ -204,10 +212,7 @@ shipping_car = ShippingCar()
 
 
 if __name__ == '__main__':
-    vin_list1, table_json1 = shipping_car.faker_flag()
-    vin_str1 = ','.join(vin_list1)
-    shipping_car.new_save(table_json1)
-    # shipping_car.to_store(vin_str1)
+    shipping_car.to_store("")
 
 
 

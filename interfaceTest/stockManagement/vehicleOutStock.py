@@ -88,11 +88,7 @@ class OutStock(object):
 out_stock = OutStock()
 
 if __name__ == '__main__':
-    vin1 = "62862356599565623"
-    type_1 = "采购退回出库"
-    sd_no1 = out_stock.create_order(type_1, vin1)
-    out_stock.submit_audit(vin1, sd_no1, type_1)
-    # out_stock.out_store(sd_no1)
+    out_stock.out_store("VD2202210001")
 
 
 

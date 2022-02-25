@@ -1,0 +1,93 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "购车建议书模块用例集",
+    "children" : [ {
+      "name" : "test_save",
+      "uid" : "e79f60beb721c1b1",
+      "parentUid" : "b4082f560192267b0e8081c1c6c8e6fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1638941915854,
+        "stop" : 1638941915855,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_query",
+      "uid" : "d22c94e2b863ac37",
+      "parentUid" : "b4082f560192267b0e8081c1c6c8e6fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638941916576,
+        "stop" : 1638941918911,
+        "duration" : 2335
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_submit",
+      "uid" : "94b01c7fce77de41",
+      "parentUid" : "b4082f560192267b0e8081c1c6c8e6fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638941918917,
+        "stop" : 1638941918917,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b4082f560192267b0e8081c1c6c8e6fe"
+  }, {
+    "name" : "test_save",
+    "uid" : "fc87ada937a92b97",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1638941919835,
+      "stop" : 1638941919835,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_query",
+    "uid" : "9d39dd1f7b7857bf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1638941920480,
+      "stop" : 1638941923253,
+      "duration" : 2773
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_submit",
+    "uid" : "842912fea373b972",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1638941923256,
+      "stop" : 1638941923256,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_delete",
+    "uid" : "be37ce0b92c45df4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1638941923260,
+      "stop" : 1638941923260,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

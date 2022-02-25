@@ -63,8 +63,8 @@ class AdvancePayment(object):
 advance_payment = AdvancePayment()
 
 if __name__ == '__main__':
-    advance_payment.query()
-    # advance_payment.gathering("DO2104120001")
+    # advance_payment.query()
+    advance_payment.gathering("DO2202180001")
 
 
 

@@ -2,7 +2,8 @@ from readConfig import read_config
 
 
 base_url = read_config.get_http("base_url")
-shipping_cars = 10  # 在途车采购数量
+shipping_cars = 2  # 在途车采购数量
+is_deputy_delivery = 12781002  # 是否代交车
 
 globals_urls = {
     "基础参数设置": base_url + "/system/defaultPara/index",
@@ -62,6 +63,7 @@ shipping_urls = {
     "资金成本设置保存": base_url + "/sales/shippingNotify/saveShippingNotifyCaptialCost",
 
     "在途车转入库": base_url + "/sales/shippingNotify/commitShippingNotifyToStore",
+    "在途车删除": base_url + "/sales/shippingNotify/deleteShippingNotify",
 
 
     "检查是否虚销": base_url + "/sales/shippingNotify/checkFakeFlag",
