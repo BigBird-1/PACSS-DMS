@@ -62,5 +62,5 @@ class SalesReturn(object):
 sales_return = SalesReturn()
 
 if __name__ == '__main__':
-    sales_return.new_save()
+    sales_return.new_save("")
 

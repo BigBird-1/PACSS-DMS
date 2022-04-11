@@ -75,7 +75,8 @@ class DepositOrder(object):
         user_name = auth_dict["用户信息"]['userName']  # 登陆用户信息
         user_id = auth_dict["用户信息"]['id']['userId']
         # -----------------------衍生信息-------------------------------------------------------------------------------
-        res = http_r.run_main('get', url=deposit_urls["明细初始化"], name="预订单内衍生明细初始化")
+        params = {"editMode": 1}
+        res = http_r.run_main('get', data=params, url=deposit_urls["明细初始化"], name="预订单内衍生明细初始化")
         city_code = res["data"]["city"]  # 城市默认值
         insurance_code = []  # 车险
         for item in res["data"]["insuranceServiceList"]:
@@ -294,7 +295,7 @@ deposit_order = DepositOrder()
 
 
 if __name__ == '__main__':
-    oo = deposit_order.new_save("居民身份证", phone="15926096698")
+    oo = deposit_order.new_save("居民身份证", phone="")
     # deposit_order.submit_audit(oo)
     # deposit_order.order_return("DO2106030001")
     # deposit_order.query("DO2106190002")

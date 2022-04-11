@@ -3,6 +3,7 @@ from interfaceTest.orderManagement.depositOrder import deposit_order
 from interfaceTest.stockManagement.shippingCar import shipping_car
 from interfaceTest.stockManagement.vehiclesStockEntry import stock_entry
 from interfaceTest.orderManagement.salesOrder import sales_order
+from interfaceTest.derivativesBusiness.decorationOrder import decoration_order
 from interfaceTest.orderManagement.salesReturn import sales_return
 from interfaceTest.orderManagement.transferOrder import transfer_order
 from interfaceTest.orderManagement.deliveryCar import delivery_car
@@ -186,6 +187,7 @@ class RunFlow(object):
         """销售订单出库流程"""
         is_dispatched_audit = sales_order.is_dispatch_audit(vin)
         so_no, customer_type = sales_order.new_save(vin, phone=phone)
+        decoration_order.new_save(so_no=so_no)
         sales_order.submit_audit(so_no)
         time.sleep(10)
         order_info = sales_order.order_query(so_no)
@@ -339,16 +341,18 @@ class RunFlow(object):
 flow = RunFlow()
 
 if __name__ == '__main__':
-    # flow.erp_sales_flow(phone="")
-    vin_l1 = flow.shipping_flow()
+    flow.erp_sales_flow(phone="")
+    # vin_l1 = flow.shipping_flow()
     # flow.transfer_flow("ADZ7W3VY3RUEB96CF")
     # flow.transfer_return_flow("98DZTWGR8YPASJHVC")
-    flow.gross_flow(vin_l1[0])
+    # ss = vin_str = ','.join(vin_l1)
+    # flow.gross_flow(ss)
     # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
     # flow.sales_return_flow("SN2107200001")
-    # ll = flow.deposit_flow("机构代码", phone="18702750139")  # 15896234582
+    # ll = flow.deposit_flow("居民身份证", phone="13094123467")  # 15896234582
     # flow.deposit_flow("居民身份证")
-    flow.sales_flow(vin_l1[0], phone="15007192223")  # 13545489874  13119799049
+    # flow.sales_flow("LFV3A28W3L3661404", phone="18271948794")  # 13545489874  13119799049
+    # flow.sales_flow(vin_l1[1], phone="13986955514")
     # flow.deposit_return_flow("DO2109230007")
     # flow.sales_return_flow("SN2109130009")
     # flow.into_stock("采购入库", "JTHB31B14M2078706")

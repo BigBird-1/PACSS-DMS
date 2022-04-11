@@ -171,8 +171,8 @@ class SalesOrder(object):
             "colorCodeDesc": product_data["colorName"],
             "isLoan": 12781002,  # 是否贷款
             "realChangeVin": "LBESUBFC4LW027078",  # 二手车VIN
-            "otherAmountObject": [11981003, 11981004],  # 其他服务
-            "otherAmount": 2000,  # 其他服务金额
+            "otherAmountObject": "",  # 其他服务
+            "otherAmount": 0,  # 其他服务金额
             "lossReplacementProfit": 0,  # 全损换新预估毛利
             "discountRefundAmount": 0,  # 后期折让或退款金额
             "decorationDerateAmount": 0,  # 精品减免金额

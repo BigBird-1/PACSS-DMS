@@ -28,8 +28,8 @@ class DeliveryCar(object):
 
     @staticmethod
     def file_up(so_no):
-        file_path = r"C:\Users\cpr264\Desktop\JPG测试图片.jpg"
-        files = [("file", ("JPG测试图片.jpg", open(file_path, 'rb'), "image/jpeg"))]
+        file_path = r"C:\Users\cpr264\Desktop\阿狸.jpg"
+        files = [("file", ("阿狸.jpg", open(file_path, 'rb'), "image/jpeg"))]
         res = http_r.run_main('post', url=delivery_urls["交车上传附件"], files=files, name="交车上传附件")
         file_data = eval(res["data"])
         data = {

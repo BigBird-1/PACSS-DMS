@@ -1,36 +1,4 @@
-# import unittest
-# from common.HTMLTestRunnerEN import HTMLTestRunner
-#
-#
-# class NewBrand(unittest.TestCase):
-#
-#     def test_01(self):
-#         print(111)
-#
-#
-# suite = unittest.TestSuite()
-# # loader = unittest.TestLoader()
-# # suite.addTest(loader.loadTestsFromTestCase(NewBrand))
-# suite.addTest(NewBrand('test_01'))
-# # runner = unittest.TextTestRunner()
-# filename = r'F:\DMS_2020\aaa.html'
-# with open(filename, 'wb') as f:
-#     runner = HTMLTestRunner(stream=f)
-#     runner.run(suite)
-# from testCase.test01case import NewBrand
-#
-# suite = unittest.TestSuite()
-# # loader = unittest.TestLoader()
-# # suite.addTest(loader.loadTestsFromTestCase(NewBrand))
-# suite.addTest(NewBrand('test_case'))
-# # runner = unittest.TextTestRunner()
-# with open('./ce1.html', 'wb') as f:
-#     runner = HTMLTestRunner(stream=f)
-#     runner.run(suite)
-# a = "case/test01"
-# case_name = a.split("/")[-1]
-# print(case_name)
-# print(type(case_name))
+import xlrd
 
 
 def func(fn):
@@ -61,139 +29,54 @@ def test_with_param(p):
     print(test_with_param.__name__)
 
 
-# test_with_param(3)
-# import os
-# import getpathInfo
+# sstr = "HD420600,HD420684,HD340500,HD420620,HD130100,HD450130,HD420630,HD340400,HX340126,HX360110,HX360111,HX340113,HD130300,HX410112,HX420135,HX430109,HD450150,HX650101,HD360120,HD420040,HX340128,HD340310,HD420590,HX360109,HD340320,HX450116,HX340204,HD420210,HD420350,HD420190,HX340202,HD521700,HX522206,HD620210,HD620280,HX522208,HD410120,HD420640,HD420370,HD420687,HD420686,HD420170,HD420110,HD610200,HD640100,HD640200,HD340500,HD410140,HX360114,HD610103,HD410150,HX421216,HX421302,HX340129,HD450160,HA420101,HA420134,HM420102,HM420145,HX520204,HX520419,HX522207,HX522305,HX522606,HX522709,HX420141,HX420145,HX420134,HD420020,HD420010,HD420146,HD340130,HX340801,HD340700,HD420695,HD420696,HD420697,HD420698,HD430140,HX425001,HD450115,HX410109,HX420123,HX430106,HD340610,HD425900,HD430120,HD340200,HD420030,HD420580,HD420148,HX360113,HD450140,HD130400,HX650101,HX410110,HX420140,HX430107,HD340340,HX340119,HD440100,HD420000,HD420610,HD420699,HD430100,HD360100,HD450100,HD610400,HX330401,HX420129,HD360140,HD340100,HD130200,HD130500,HD410200,HD420080,HD420650,HD360110,HX450111,HD420060,HD420560,HD360130,HX450113,HD520200,HD521400,HD610500,HD620140,HD521300,HD520600,HD410180,HD420470,HD420450,HD420694,HD420682,HD521200,HD520900,HD521800,HD520500,HD521900,HD420270,HD420460,HD420430,HD420230,HD420660,HD420410,HD420530,HD420683,HD410130,HD340800,HD420070,HD450120,HX450201,HX411308,HX420614,HX420514,HD640120"
+# sstr = "HX421216,HX421302,HX340129,HD450160,HD430120,HD340200,HD420600,HD420684,HD340500,HD420620,HD130100,HD450130,HD420630,HD340400,HX340126,HX360110,HX650101,HD340100,HD340300,HD340330,HD340310,HD340320,HD340340,HD340610,HX340113,HX340119,HD340800,HX340128,HD440100,HD130200,HD130300,HD130500,HD410200,HX410109,HX410110,HX410112,HD420000,HD420030,HD420040,HD420060,HD420080,HD420070,HD420590,HD425900,HD420560,HD420610,HD420580,HD420650,HX420123,HD420699,HX420135,HX420140,HD420148,HA420101,HM420102,HA420134,HM420145,HF420145,HD430100,HX430106,HX430107,HX430109,HD360100,HD360110,HD360140,HD360120,HD360130,HX360109,HX360111,HX360113,HD450100,HD450110,HD450120,HD450140,HD450150,HX450111,HX450113,HD610400,HX330401,HX520204,HX520419,HX522207,HX522305,HX522606,HX522709,HX420141,HX420145,HX420134,HD420020,HD420010,HD420146,HD340130,HX450116,HX420129,HX340204,HD420210,HD420350,HD420190,HX340202,HD521700,HX522206,HX450201,HX411308,HX420614,HX420514,HX340801,HD340700,HD420695,HD420696,HD420697,HD420698,HD430140,HX425001,HD520200,HD521400,HD610500,HD620210,HD620280,HX522208,HD410120,HD420640,HD420370,HD420687,HD420686,HD420170,HD420110,HD610200,HD640100,HD640120,HD410140,HX360114,HD610103,HD640200,HD450115,HD620140,HD521300,HD520600,HD410180,HD420470,HD420450,HD420694,HD420682,HD521200,HD520900,HD521800,HD520500,HD521900,HD420270,HD420460,HD420430,HD420230,HD420660,HD420410,HD420530,HD420683,HD410150,HD130400,HD410130"
+# ll = sstr.split(",")
 #
+# print(ll)
+# print(len(ll))
+
+# sstr1 = "HX340129,HD450160,HX421302,HX421216,HX650101,HD430120,HD340200,HD420600,HD420684,HX340126,HX360110,HD340500,HD420620,HD130100,HD450130,HD420630,HD340400,HD340100,HD340300,HD340330,HD340310,HD340320,HD340340,HD340610,HX340113,HX340119,HD340800,HX340128,HD440100,HD130200,HD130300,HD130500,HD410200,HX410109,HX410110,HX410112,HD420000,HD420030,HD420040,HD420060,HD420080,HD420070,HD420590,HD425900,HD420560,HD420610,HD420580,HD420650,HX420123,HD420699,HX420135,HX420140,HD420148,HA420101,HM420102,HA420134,HM420145,HF420145,HD430100,HX430106,HX430107,HX430109,HD360100,HD360110,HD360140,HD360120,HD360130,HX360109,HX360111,HX360113,HD450100,HD450110,HD450120,HD450140,HD450150,HX450111,HX450113,HD610400,HX330401,HX520204,HX520419,HX522207,HX522305,HX522606,HX522709,HX420141,HX420145,HX420134,HD420020,HD420010,HD420146,HX420129,HX450116,HD340130,HX340204,HD420210,HD420350,HD420190,HX340202,HD521700,HX522206,HX450201,HX411308,HX420614,HX420514,HX340801,HD340700,HD420695,HD420696,HD420697,HD420698,HD430140,HX425001,HD520200,HD521400,HD610500,HD620210,HD620280,HX522208,HD410120,HD420640,HD420370,HD420687,HD420686,HD420170,HD420110,HD610200,HD640100,HD640120,HD410140,HX360114,HD610103,HD640200,HD450115,HD620140,HD521300,HD520600,HD410180,HD420470,HD420450,HD420694,HD420682,HD521200,HD520900,HD521800,HD520500,HD521900,HD420270,HD420460,HD420430,HD420230,HD420660,HD420410,HD420530,HD420683,HD410150,HD130400,HD410130"
+# sstr1 = "HX421216,HX421302,HX340129,HD450160,HD430120,HD340200,HD420600,HD420684,HD340500,HD420620,HD130100,HD450130,HD420630,HD340400,HX340126,HX360110,HX650101,HD340100,HD340300,HD340330,HD340310,HD340320,HD340340,HD340610,HX340113,HX340119,HD340800,HX340128,HD440100,HD130200,HD130300,HD130500,HD410200,HX410109,HX410110,HX410112,HD420000,HD420030,HD420040,HD420060,HD420080,HD420070,HD420590,HD425900,HD420560,HD420610,HD420580,HD420650,HX420123,HD420699,HX420135,HX420140,HD420148,HA420101,HM420102,HA420134,HM420145,HF420145,HD430100,HX430106,HX430107,HX430109,HD360100,HD360110,HD360140,HD360120,HD360130,HX360109,HX360111,HX360113,HD450100,HD450110,HD450120,HD450140,HD450150,HX450111,HX450113,HD610400,HX330401,HX520204,HX520419,HX522207,HX522305,HX522606,HX522709,HX420141,HX420145,HX420134,HD420020,HD420010,HD420146,HD340130,HX450116,HX420129,HX340204,HD420210,HD420350,HD420190,HX340202,HD521700,HX522206,HX450201,HX411308,HX420614,HX420514,HX340801,HD340700,HD420695,HD420696,HD420697,HD420698,HD430140,HX425001,HD520200,HD521400,HD610500,HD620210,HD620280,HX522208,HD410120,HD420640,HD420370,HD420687,HD420686,HD420170,HD420110,HD610200,HD640100,HD640120,HD410140,HX360114,HD610103,HD640200,HD450115,HD620140,HD521300,HD520600,HD410180,HD420470,HD420450,HD420694,HD420682,HD521200,HD520900,HD521800,HD520500,HD521900,HD420270,HD420460,HD420430,HD420230,HD420660,HD420410,HD420530,HD420683,HD410150,HD130400,HD410130"
+# ll1 = sstr1.split(",")
+
+# print(ll1)
+# print(len(ll1))
 #
-# path = getpathInfo.get_path()
-# report_path = os.path.join(path, 'result/report')
+# for i in ll1:
+#     if i not in ll:
+#         print(i)
 #
-# print(os.path.abspath(report_path))
-# import time
-# import requests
-# from tomorrow import threads
+# aa = []
+# for i in ll:
+#     if i not in aa:
+#         aa.append(i)
+#     else:
+#         print(i)
+
+
+# work_book = xlrd.open_workbook(r"C:\Users\cpr264\Downloads\解除限价管控门店-0312.xlsx")
+# #
+# sheet1 = work_book.sheet_by_name("3月12日")
+# cols = sheet1.col_values(1)[1::]
+# print(cols)
+# print(len(cols))
+# #
 #
-# urls = [
-#     'http://www.baidu.com',
-#     'http://www.163.com',
-#     'http://www.bilibili.com',
-#     'http://www.jd.com',
-#     'http://www.12306.com',
-#     'http://www.sohu.com',
-#     'http://www.taobao.com'
-# ]
+# aa = ','.join(cols)
 #
-#
-# @threads(10)
-# def download(url):
-#     headers = {
-#         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36"
-#     }
-#     return requests.get(url, headers=headers)
-#
-#
-# if __name__ == "__main__":
-#     import time
-#
-#     start = time.time()
-#     responses = [download(url) for url in urls]
-#     html = [response.text for response in responses]
-#     end = time.time()
-#     print("Time: %f seconds" % (end - start))
-# import unittest
-# from nose_parameterized import parameterized
-#
-# c = [[11,22,33], [22,34,44]]
-#
-# class Dd(unittest.TestCase):
-#
-#     @parameterized.expand(c)
-#     def test_1(self, a, b, c):
-#         print(c)
-#         if a == 11:
-#             self.assertEqual(b, 22)
-#         if a == 22:
-#             self.assertEqual(c, 55)
-#
-# if __name__ == '__main__':
-#     unittest.main()
-# import random
-# import string
-#
-#
-# vin = ''.join(random.sample(string.ascii_uppercase + string.digits, 17))
-#
-#
-# print(vin)
+# print(aa)
 
+# for i in cols:
+#     if i not in ll:
+#         print(i)
 
-# name = "321"
-# print(name[::-1])
+a = 200.345
 
-# d1 = {"aa": 1, "bb": ""}
-#
-# d2 = {"cc": d1["aa"], "dd": d1["bb"] if d1["bb"] is not "" else "33"}
-#
-# print(d2)
-# dict = {"aa": "null"}
+print("%.2f" % a)
+print(type(round(a, 2)))
+print(format(a,'.2f'))
 
-"""销售订单新增初始化/apigateway/sales/salesOrder/initData
-梯度加压，每10秒增加100个线程，运行100秒增加到1000个线程后维持1000个线程继续运行100s"""
-import datetime
-import requests
-import threading
-import multiprocessing
-from concurrent.futures import ThreadPoolExecutor
-from common.configHttp import RunMain
-from statistics import mean
+from decimal import Decimal
 
-
-headers = RunMain().get_token()
-url = "https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/initData"
-
-
-def func():
-    res = requests.get(headers=headers, url=url)
-    t1 = res.elapsed.total_seconds()
-    # print(t1)
-    return t1
-
-    # if res.status_code == 200:
-    #     print(".")
-    # else:
-    #     print("F")
-
-
-if __name__ == "__main__":
-    pool = multiprocessing.Pool(processes=200)
-    t_list = []
-    first = datetime.datetime.now()
-    for i in range(1000):
-        t_list.append(pool.apply_async(func))
-        # pool.apply_async(func)   # 维持执行的进程总数为processes，当一个进程执行完毕后会添加新的进程进去
-    print("Mark~ Mark~ Mark~~~~~~~~~~~~~~~~~~~~~~")
-    pool.close()
-    pool.join()   #调用join之前，先调用close函数，否则会出错。执行完close后不会有新的进程加入到pool,join函数等待所有子进程结束
-    print("Sub-process(es) done.")
-    end = datetime.datetime.now()
-    t = (end - first).seconds
-    list1 = [x.get() for x in t_list]  # 取出所有子进程的返回值
-    n = len(list1)
-    l = mean(list1)
-    c = n*l/t
-    print(n, l, t, c)
-    # pool = ThreadPoolExecutor(max_workers=100)
-    # for i in range(100):
-    #     pass
-
-
-
-
-
-
-
-
-
-
-
+print(Decimal(a).quantize(Decimal("0.00")))

@@ -119,6 +119,23 @@ sales_urls = {
     "库存车辆查询": base_url + "/sales/salesOrder/queryVinInfo"
 }
 
+decoration_urls = {
+    "装潢录入列表初始化": base_url + "/valueadded/decorationOrderQuery/init",
+    "装潢项目选择查询": base_url + "/valueadded/decorationManage/getList",
+    "仓库下拉选择": base_url + "/parts/decorationPartOut/addDecorationPartOutItemInitData",
+    "装潢配件查询": base_url + "/parts/decorationPartOut/getPartStockList",
+    "装潢单保存": base_url + "/valueadded/decorationOrder/saveDecorationOrder",
+    "销售订单客户info": base_url + "/sales/salesQuery/getSalesCustomerInfo",
+    "获取品牌": base_url + "/master/carBase/getBrandList",
+    "获取车系": base_url + "/master/carBase/getSeriesList",
+    "获取车型": base_url + "/master/carBase/getModelList",
+    "获取配置": base_url + "/master/carBase/getConfigList",
+    "获取外饰色": base_url + "/master/carBase/getSeriesOutColorMappingList",
+    "新增初始化": base_url + "/valueadded/decorationOrder/initEdit",
+    "销售单查询": base_url + "/sales/salesQuery/insSearchSalesOrder",
+
+}
+
 sales_return_urls = {
     "新建销售退回列表查询": base_url + "/sales/orderCancel/searchSalesClose",
     "退回单带出原单信息": base_url + "/sales/salesOrder/newSalesCancelDo",

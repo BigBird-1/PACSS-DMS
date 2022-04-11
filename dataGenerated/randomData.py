@@ -610,7 +610,7 @@ def random_card():
                  '610521': '华县', '420112': '东西湖区', '411122': '临颍县', '131022': '固安县', '659001': '石河子市', '130800': '承德',
                  '640500': '中卫市', '430382': '韶山市', '440307': '龙岗区'}
     # district = random.choice(list(area_dict.keys()))  # 地区项
-    district = '420621'  # 地区项
+    district = '420105'  # 地区项
     year = str(random.randint(1950, 2001))  # 年份项
     month_day = (date.today() + timedelta(days=random.randint(1, 366))).strftime('%m%d')  # 月份和日期项
     id_17 = district + year + month_day + str(random.randint(100, 999))  # 顺序号简单处理
