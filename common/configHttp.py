@@ -1,7 +1,5 @@
-from urllib.parse import urlencode
 import requests
 import json
-# import geturlParams
 from common import Log
 from readConfig import read_config
 
@@ -11,10 +9,8 @@ log = Log.logger
 class RunMain(object):
 
     @staticmethod
-    def send_post(url, data, headers, files, name):  # 定义一个方法，传入需要的参数url和data
-        # 参数必须按照url、data顺序传入、headers已鉴权
+    def send_post(url, data, headers, files, name):
         res = requests.post(url=url, data=data, headers=headers, files=files)
-        # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
         log.info("{} {}-响应时间:{}".format(url, name, res.elapsed.total_seconds()))
         result = res.json()
         return result
@@ -22,31 +18,45 @@ class RunMain(object):
     @staticmethod
     def send_get(url, data, headers, name):
         res = requests.get(url=url, params=data, headers=headers)
-        # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
         log.info("{} {}-响应时间:{}".format(url, name, res.elapsed.total_seconds()))
         result = res.json()
         return result
 
     @staticmethod
     def send_put(url, data, headers, name):
-        res = requests.put(url=url, params=data, headers=headers)
-        # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
+        res = requests.put(url=url, data=data, headers=headers)
         log.info("{} {}-响应时间:{}".format(url, name, res.elapsed.total_seconds()))
         result = res.json()
         return result
 
     def run_main(self, method, url=None, data=None, files=None, is_json=None, name=None, flag=None):
+        """
+        接口处理器
+        :param method: 请求方式
+        :param url: 接口地址
+        :param data: 请求体/请求参数
+        :param files: 上传文件
+        :param is_json: 标记是否json格式
+        :param name: 接口中文描述
+        :param flag: 切换店铺标记
+        :return: 字典格式的响应数据
+        """
         result = None
-        # 带token的headers
-        headers = self.get_token(flag)
+        headers = self.get_token(flag)  # 带token的请求头
+        # -------------------------对data数据格式进行处理---------------------------------------------------------------
         if isinstance(data, dict):
-            # data = urlencode(data).encode()
-            for k, v in data.items():
-                data[k] = str(v)
-            headers["Content-Type"] = "application/x-www-form-urlencoded"
-            if is_json == 1:
+            if is_json == 2:
                 data = json.dumps(data)
-                headers["Content-Type"] = "application/json;charset=UTF-8"
+            elif is_json == 1:
+                # data = urlencode(data).encode()
+                for k, v in data.items():
+                    data[k] = str(v)
+                data = json.dumps(data)
+            else:
+                # data = urlencode(data).encode()
+                for k, v in data.items():
+                    data[k] = str(v)
+                headers["Content-Type"] = "application/x-www-form-urlencoded"
         if files:
             del headers["Content-Type"]
         if method == 'post':
@@ -79,7 +89,7 @@ class RunMain(object):
             params["entitycode"] = "{}".format(read_config.get_http('entity_code1'))
         res_dict = requests.get(url, headers=headers, params=params).json()
         try:
-            token_type = res_dict["token_type"]
+            token_type = res_dict["token_type"].capitalize()
             access_token = res_dict["access_token"]
             # 将token放进请求头里
             headers["Authorization"] = "{} {}".format(token_type, access_token)

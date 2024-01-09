@@ -1,19 +1,20 @@
 import time
-from interfaceTest.orderManagement.depositOrder import deposit_order
-from interfaceTest.stockManagement.shippingCar import shipping_car
-from interfaceTest.stockManagement.vehiclesStockEntry import stock_entry
-from interfaceTest.orderManagement.salesOrder import sales_order
-from interfaceTest.derivativesBusiness.decorationOrder import decoration_order
-from interfaceTest.orderManagement.salesReturn import sales_return
-from interfaceTest.orderManagement.transferOrder import transfer_order
-from interfaceTest.orderManagement.deliveryCar import delivery_car
-from interfaceTest.stockManagement.vehicleGrossStandard import gross_standard
-from interfaceTest.stockManagement.vehicleOutStock import out_stock
-from interfaceTest.wfsAudit import to_do
-from interfaceTest.salesSettlement.advancePayment import advance_payment
-from interfaceTest.salesSettlement.settlementGathering import settlement_gathering
-from interfaceTest.initialization import initial
-from interfaceTest.constants import is_deputy_delivery
+from apiTest.orderManagement.depositOrder import deposit_order
+from apiTest.stockManagement.shippingCar import shipping_car
+from apiTest.stockManagement.vehiclesStockEntry import stock_entry
+from apiTest.orderManagement.salesOrder import sales_order
+from apiTest.derivativesBusiness.decorationOrder import decoration_order
+from apiTest.orderManagement.salesReturn import sales_return
+from apiTest.orderManagement.transferOrder import transfer_order
+from apiTest.orderManagement.deliveryCar import delivery_car
+from apiTest.stockManagement.vehicleGrossStandard import gross_standard
+from apiTest.stockManagement.vehicleOutStock import out_stock
+from apiTest.wfsAudit import to_do
+from apiTest.salesSettlement.advancePayment import advance_payment
+from apiTest.salesSettlement.settlementGathering import settlement_gathering
+from apiTest.initialization import initial
+from apiTest.constants import is_deputy_delivery
+from apiTest.fixedAssets.purchasingApplication import fixed_assets
 from common import Log
 import readConfig
 from common.configEmail import SendEmail
@@ -100,7 +101,7 @@ class RunFlow(object):
     def gross_flow(vin_str):
         """
         单车综合毛利标准设置
-        :param vin_str: 字符串 "HY6T5RFDESW3ER4"
+        :param vin_str: 字符串 “HGYGTFRFREDR4ER5T”
         :return:
         """
         vin_list = gross_standard.save(vin_str)
@@ -110,11 +111,11 @@ class RunFlow(object):
     def shipping_flow(self, vin=None):
         """整车采购入库流程"""
         vin_list = shipping_car.new_save(vin)
-        vin_str = ','.join(vin_list)
+        vin_s = ','.join(vin_list)
         if sales_params["计算单车资金成本"] == "12781001" and is_deputy_delivery == 12781002:
-            shipping_car.capital_cost(vin_str)
-        se_no = shipping_car.to_store(vin_str)
-        self.into_stock("厂家采购入库", vin_str, se_no=se_no)
+            shipping_car.capital_cost(vin_s)
+        se_no = shipping_car.to_store(vin_s)
+        self.into_stock("厂家采购入库", vin_s, se_no=se_no)
 
         return vin_list
 
@@ -183,13 +184,17 @@ class RunFlow(object):
         return return_no
 
     @staticmethod
-    def sales_flow(vin, phone=""):
+    def sales_flow(vin, phone="", customer_type=""):
         """销售订单出库流程"""
         is_dispatched_audit = sales_order.is_dispatch_audit(vin)
-        so_no, customer_type = sales_order.new_save(vin, phone=phone)
-        decoration_order.new_save(so_no=so_no)
+        so_no, customer_type = sales_order.new_save(vin, phone, customer_type)
+        # decoration_order.new_save(so_no=so_no)
         sales_order.submit_audit(so_no)
         time.sleep(10)
+        order_info = sales_order.order_query(so_no)
+        if order_info["soStatus"] == "未提交":
+            sales_order.submit_audit(so_no)
+            time.sleep(10)
         order_info = sales_order.order_query(so_no)
         # -----------------------提交审核之后---------------------------------------------------------------------------
         if order_info["soStatus"] == "审核中":
@@ -231,9 +236,9 @@ class RunFlow(object):
 
         return so_no
 
-    def sales_return_flow(self, old_no=""):
+    def sales_return_flow(self, key_word=""):
         """销售订单退回流程"""
-        return_no, vin = sales_return.new_save(old_no)
+        return_no, vin = sales_return.new_save(key_word)
         sales_return.submit_audit(return_no)
         time.sleep(5)
         y_t = sales_return.query(return_no)
@@ -285,7 +290,6 @@ class RunFlow(object):
 
     def transfer_return_flow(self, vin):
         """调拨入库退回流程:1.调拨车辆入库(B店) 2.调拨车辆退回出库(B店) 3.调拨退回单审核(A店) 4.调拨退回车辆入库(A店)"""
-
         self.into_stock("调拨入库", vin, flag=1)
         log.info("-----(B店调拨车辆入库完成)-----")
         self.leave_stock("调拨退回出库", vin, flag=1)
@@ -311,6 +315,45 @@ class RunFlow(object):
         # if sales_params["调拨退回订单审核通过自动入库"] == "12781002":
         #     self.into_stock("调拨退回入库", vin)
         log.info("车辆已入库:{},-----(调拨退回订单已完成:{})-----".format(vin, so_no))
+
+    @staticmethod
+    def fixed_assets_flow(apply_type, buy_trench, vin=""):
+        """
+        固定资产车采购申请
+        :return: 申请的车架号
+        """
+        order_no, url_id, vin_1 = fixed_assets.save(apply_type, buy_trench, vin)
+        fixed_assets.submit_audit(url_id, "固定资产车采购申请提交审核")
+        to_do.audit_flow(order_no)
+        y_t = fixed_assets.query(order_no)
+        if y_t["status_text"] == "已批准":
+            log.info("固定资产车采购申请已完成 单据编号{}".format(order_no))
+        else:
+            log.error("审核通过 状态不一致，当前状态：{}".format(y_t["status_text"]))
+            return
+
+        return vin_1
+
+    @staticmethod
+    def assets_store(vin):
+        """固定资产车入库"""
+        y_t = fixed_assets.query1(vin)
+        url_id = y_t["id"]
+        order_no = fixed_assets.to_store(url_id)
+        fixed_assets.submit_audit(url_id, "固定资产车入库提交审核")
+        to_do.audit_flow(order_no)
+        time.sleep(2)
+        y_t = fixed_assets.query1(vin)
+        log.info("车架号：{}，库存状态：{}，使用状态：{}".format(vin, y_t["inventory_status_name"], y_t["car_state_name"]))
+
+    def oa_assets_store(self, apply_type, buy_trench, vin=""):
+        """固定资产车采购申请-ERP销售出库-入库"""
+        vin_1 = self.fixed_assets_flow(apply_type, buy_trench, vin)
+        time.sleep(2)
+        if apply_type in ["试乘试驾车", "服务替换车"] and buy_trench == "自店采购":
+            self.sales_flow(vin_1, customer_type="本经销商")
+            time.sleep(2)
+        self.assets_store(vin_1)
 
     def erp_sales_flow(self, phone=""):
         """
@@ -341,21 +384,15 @@ class RunFlow(object):
 flow = RunFlow()
 
 if __name__ == '__main__':
-    flow.erp_sales_flow(phone="")
-    # vin_l1 = flow.shipping_flow()
-    # flow.transfer_flow("ADZ7W3VY3RUEB96CF")
-    # flow.transfer_return_flow("98DZTWGR8YPASJHVC")
-    # ss = vin_str = ','.join(vin_l1)
-    # flow.gross_flow(ss)
-    # flow.leave_stock("销售出库", "L0F6SUR127PYVMXEG")
-    # flow.sales_return_flow("SN2107200001")
-    # ll = flow.deposit_flow("居民身份证", phone="13094123467")  # 15896234582
-    # flow.deposit_flow("居民身份证")
-    # flow.sales_flow("LFV3A28W3L3661404", phone="18271948794")  # 13545489874  13119799049
-    # flow.sales_flow(vin_l1[1], phone="13986955514")
-    # flow.deposit_return_flow("DO2109230007")
-    # flow.sales_return_flow("SN2109130009")
-    # flow.into_stock("采购入库", "JTHB31B14M2078706")
+    # flow.erp_sales_flow(phone="")
+    vin_l1 = flow.shipping_flow()
+    vin1 = vin_l1[0]
+    ss = ','.join(vin_l1)
+    flow.gross_flow(ss)
+    # flow.sales_flow(vin1, phone="13632708205", customer_type="")
+    # flow.sales_return_flow("1BLDC8A609KGZ0UFS")
+    # flow.oa_assets_store("试乘试驾车", "自店采购", vin="LEFCJCDC79HP30D0D")
+    # flow.fixed_assets_flow("工作车", "")
 
 
 

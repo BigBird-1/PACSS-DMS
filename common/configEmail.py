@@ -1,6 +1,6 @@
 import os
 import time
-import win32com.client as win32
+# import win32com.client as win32
 import datetime
 import readConfig
 import getpathInfo

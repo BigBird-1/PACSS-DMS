@@ -1,0 +1,55 @@
+{
+  "uid" : "a57fa03d213de169",
+  "name" : "test_delete",
+  "fullName" : "apiTestCase.test_02order.TestOrder2#test_delete",
+  "historyId" : "f9cfb475818510777329474c17d13e43",
+  "time" : {
+    "start" : 1668160294973,
+    "stop" : 1668160294973,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "apiTestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_02order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder2"
+  }, {
+    "name" : "host",
+    "value" : "CPR264"
+  }, {
+    "name" : "thread",
+    "value" : "19716-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "apiTestCase.test_02order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a57fa03d213de169.json",
+  "parameterValues" : [ ]
+}

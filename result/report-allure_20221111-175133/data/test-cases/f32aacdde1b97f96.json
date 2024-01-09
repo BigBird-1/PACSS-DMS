@@ -1,0 +1,55 @@
+{
+  "uid" : "f32aacdde1b97f96",
+  "name" : "test_submit",
+  "fullName" : "apiTestCase.test_02order.TestOrder2#test_submit",
+  "historyId" : "a7a9c5f8e95ae7ba6803985cf45d189c",
+  "time" : {
+    "start" : 1668160294970,
+    "stop" : 1668160294970,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "apiTestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_02order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder2"
+  }, {
+    "name" : "host",
+    "value" : "CPR264"
+  }, {
+    "name" : "thread",
+    "value" : "19716-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "apiTestCase.test_02order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f32aacdde1b97f96.json",
+  "parameterValues" : [ ]
+}

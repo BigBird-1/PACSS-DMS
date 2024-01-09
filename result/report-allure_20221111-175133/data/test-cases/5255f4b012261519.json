@@ -1,0 +1,58 @@
+{
+  "uid" : "5255f4b012261519",
+  "name" : "test_submit",
+  "fullName" : "apiTestCase.test_01order.TestOrder1#test_submit",
+  "historyId" : "77ddecbe318ccf28739b3d60c4a6e2a8",
+  "time" : {
+    "start" : 1668160294408,
+    "stop" : 1668160294408,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "购车建议书模块用例集"
+  }, {
+    "name" : "parentSuite",
+    "value" : "apiTestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_01order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder1"
+  }, {
+    "name" : "host",
+    "value" : "CPR264"
+  }, {
+    "name" : "thread",
+    "value" : "19716-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "apiTestCase.test_01order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5255f4b012261519.json",
+  "parameterValues" : [ ]
+}

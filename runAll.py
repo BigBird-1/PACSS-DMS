@@ -26,7 +26,7 @@ class AllTest:  # 定义一个类AllTest
         global resultPath
         resultPath = os.path.join(report_path, 'report')  # result/report/t.html
         self.caseListFile = os.path.join(path, "caseList.txt")  # 配置执行哪些测试文件的配置文件路径
-        self.caseFile = os.path.join(path, "testCase")  # 真正的测试断言文件路径
+        self.caseFile = os.path.join(path, "apiTestCase")  # 真正的测试断言文件路径
         self.case_list = []
 
     def set_case_list(self):

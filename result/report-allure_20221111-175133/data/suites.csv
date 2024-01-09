@@ -1,0 +1,7 @@
+"Status","Name","Duration in ms","Description"
+"passed","apiTestCase.test_02order.TestOrder2#test_delete","0",""
+"passed","apiTestCase.test_01order.TestOrder1#test_submit","0",""
+"failed","apiTestCase.test_01order.TestOrder1#test_save","0",""
+"failed","apiTestCase.test_01order.TestOrder1#test_11","436",""
+"passed","apiTestCase.test_02order.TestOrder2#test_submit","0",""
+"passed","apiTestCase.test_02order.TestOrder2#test_save","0",""

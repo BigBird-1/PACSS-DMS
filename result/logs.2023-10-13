@@ -1,0 +1,260 @@
+[2023-10-13 09:38:04,361] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/initData 购车建议书下拉框初始化-响应时间:0.336676
+[2023-10-13 09:38:05,121] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getInitData 精品查询页面初始化-响应时间:0.26584
+[2023-10-13 09:38:06,212] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.612469
+[2023-10-13 09:38:07,171] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyInfo 在途新增页面初始化-响应时间:0.451353
+[2023-10-13 09:38:08,005] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/initData 车辆入库下拉初始化-响应时间:0.290797
+[2023-10-13 09:38:08,678] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.13892
+[2023-10-13 09:38:09,329] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.17259
+[2023-10-13 09:38:10,164] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/initData 销售订单列表下拉初始化-响应时间:0.376708
+[2023-10-13 09:38:10,908] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderReturn/initData 销售退回新建页面初始化-响应时间:0.252215
+[2023-10-13 09:38:11,785] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/transferOrder/initData 调拨订单新增initData-响应时间:0.380108
+[2023-10-13 09:38:12,444] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.129154
+[2023-10-13 09:38:13,037] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.11897
+[2023-10-13 09:38:13,785] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleOutStock/initData 车辆出库initData-响应时间:0.273458
+[2023-10-13 09:38:16,195] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/system/defaultPara/index 基础参数设置查询-index-响应时间:1.834501
+[2023-10-13 09:38:16,825] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getOptionalList 获取选装包-响应时间:0.11844
+[2023-10-13 09:38:17,396] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getColorList 获取产品内/外饰色-响应时间:0.123007
+[2023-10-13 09:38:17,987] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.115043
+[2023-10-13 09:38:17,987] shippingCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2023-10-13 09:38:18,567] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.12445
+[2023-10-13 09:38:18,567] shippingCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2023-10-13 09:38:19,457] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkExsitInStock 是否存在库存-响应时间:0.439874
+[2023-10-13 09:38:19,458] shippingCar->line:89 [INFO]:{'code': 200, 'message': None, 'data': {'vsStock': None, 'isInSo': False}}
+[2023-10-13 09:38:20,171] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTransitDays 标准在途天数-响应时间:0.175137
+[2023-10-13 09:38:20,745] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTurnoverDays 标准周转天数-响应时间:0.143119
+[2023-10-13 09:38:30,678] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getProductList 获取动力类型-响应时间:9.379343
+[2023-10-13 09:38:32,236] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotify 在途车保存-响应时间:0.88088
+[2023-10-13 09:38:32,237] shippingCar->line:163 [INFO]:在途车新增保存:{'code': 200, 'message': None, 'data': {'msg': '', 'success': True}}---['JD5KM8R34BA9CF210', 'YVB0D24K439ES5G7U']---
+[2023-10-13 09:38:32,979] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyList 在途车辆管理列表查询-响应时间:0.217035
+[2023-10-13 09:38:32,980] shippingCar->line:197 [INFO]:在途列表查询: 2
+[2023-10-13 09:38:33,748] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getCapitalCostList 获取资金成本规则-响应时间:0.275663
+[2023-10-13 09:38:34,793] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotifyCaptialCost 资金成本设置保存-响应时间:0.550622
+[2023-10-13 09:38:34,794] shippingCar->line:251 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--资金成本设置-资金规则:法透公式规则3
+[2023-10-13 09:38:35,919] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/commitShippingNotifyToStore 在途车转入库-响应时间:0.616905
+[2023-10-13 09:38:35,919] shippingCar->line:186 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '入库成功！', 'seNo': 'VD2310130001', 'success': True}}--JD5KM8R34BA9CF210,YVB0D24K439ES5G7U转入库单,入库单号:VD2310130001
+[2023-10-13 09:38:36,760] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.169561
+[2023-10-13 09:38:37,374] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.149261
+[2023-10-13 09:38:38,023] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.125299
+[2023-10-13 09:38:38,589] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.122816
+[2023-10-13 09:38:39,637] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/saveCheckOneCarAll 批量验收保存-响应时间:0.567204
+[2023-10-13 09:38:39,638] vehiclesStockEntry->line:54 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--JD5KM8R34BA9CF210,YVB0D24K439ES5G7U 验收通过
+[2023-10-13 09:38:41,131] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/postBatchAudit 车辆入库提交审核-响应时间:1.010523
+[2023-10-13 09:38:41,131] vehiclesStockEntry->line:65 [INFO]:{'code': 200, 'message': None, 'data': {'messageCode': 1}},JD5KM8R34BA9CF210,YVB0D24K439ES5G7U 提交审核成功
+[2023-10-13 09:38:46,752] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.118444
+[2023-10-13 09:38:47,384] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.117081
+[2023-10-13 09:38:50,607] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:2.776229
+[2023-10-13 09:38:50,607] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:38:50,608] wfsAudit->line:53 [INFO]:billType:车辆采购入库 billCode:BI202310130938413D36A07 taskCode:TK202005151078
+[2023-10-13 09:38:53,352] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.247891
+[2023-10-13 09:38:54,087] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.255769
+[2023-10-13 09:38:54,087] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司财务经理']
+[2023-10-13 09:38:54,720] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.150178
+[2023-10-13 09:38:54,720] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:38:56,410] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.143951
+[2023-10-13 09:38:56,410] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司财务经理, 审核已终结
+[2023-10-13 09:39:02,032] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.130548
+[2023-10-13 09:39:02,651] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.147064
+[2023-10-13 09:39:02,651] runFlow->line:68 [INFO]:车辆已入库:JD5KM8R34BA9CF210,YVB0D24K439ES5G7U -----(入库完成)-----
+[2023-10-13 09:39:03,618] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/getVehicleGrossProfitPlanSummary 综合毛利标准设置列表查询-响应时间:0.486111
+[2023-10-13 09:39:03,619] vehicleGrossStandard->line:22 [INFO]:综合毛利标准设置列表查询: 2
+[2023-10-13 09:39:03,619] vehicleGrossStandard->line:43 [INFO]:此次设置单车综合毛利标准: 3307.0
+[2023-10-13 09:39:04,241] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/editVehicleGrossProfitPlan 车辆综合毛利标准列表保存-响应时间:0.16734
+[2023-10-13 09:39:04,241] vehicleGrossStandard->line:49 [INFO]:修改成功！
+[2023-10-13 09:39:05,410] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/applyPriceLimitAudit 车辆综合毛利标准提交审核-响应时间:0.684956
+[2023-10-13 09:39:05,411] vehicleGrossStandard->line:59 [INFO]:{'code': 200, 'message': None, 'data': {'suc': True}}
+[2023-10-13 09:39:06,104] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/getVehicleGrossProfitPlanSummary 综合毛利标准设置列表查询-响应时间:0.221904
+[2023-10-13 09:39:06,104] vehicleGrossStandard->line:22 [INFO]:综合毛利标准设置列表查询: 2
+[2023-10-13 09:39:07,013] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:0.456216
+[2023-10-13 09:39:07,013] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:39:07,014] wfsAudit->line:53 [INFO]:billType:单车综合毛利审核 billCode:BI202310130939054B86ECC taskCode:TK202105101001
+[2023-10-13 09:39:09,737] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.242296
+[2023-10-13 09:39:10,532] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.240901
+[2023-10-13 09:39:10,533] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司总经理']
+[2023-10-13 09:39:11,175] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.148165
+[2023-10-13 09:39:11,176] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:39:12,794] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.164941
+[2023-10-13 09:39:12,794] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司总经理, 审核已终结
+[2023-10-13 09:39:14,037] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/vehicleStock/getVehicleStockList 库存维护列表查询-响应时间:0.76414
+[2023-10-13 09:39:15,141] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.582404
+[2023-10-13 09:39:15,881] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/queryVinInfo 销售订单库存车辆查询-响应时间:0.239172
+[2023-10-13 09:39:17,416] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/queryPoCustomer 选择客户列表查询-响应时间:1.034341
+[2023-10-13 09:39:18,327] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/returnPoCustomerInfo 客户信息info-响应时间:0.465227
+[2023-10-13 09:39:19,364] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/vehicleStock/getVehicleStockList 库存维护列表查询-响应时间:0.573483
+[2023-10-13 09:39:20,413] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.588013
+[2023-10-13 09:39:20,413] salesOrder->line:74 [INFO]:JD5KM8R34BA9CF210, 未配车, 在库
+[2023-10-13 09:39:21,062] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/returnVinInfo 选中vin返回信息-响应时间:0.175729
+[2023-10-13 09:39:23,115] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/saveSalesOrder 销售订单保存-响应时间:1.518341
+[2023-10-13 09:39:23,115] salesOrder->line:216 [INFO]:{'code': 200, 'message': None, 'data': {'orderNo': None, 'success': True, 'isSelected': False, 'soNo': 'SN2310130001'}}
+[2023-10-13 09:39:23,715] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.123652
+[2023-10-13 09:39:24,354] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.113378
+[2023-10-13 09:39:24,986] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/valueadded/decorationManage/getList 装潢项目选择查询-响应时间:0.170294
+[2023-10-13 09:39:25,571] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/parts/decorationPartOut/addDecorationPartOutItemInitData 仓库下拉选择-响应时间:0.143235
+[2023-10-13 09:39:26,779] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/parts/decorationPartOut/getPartStockList 装潢配件查询-响应时间:0.743964
+[2023-10-13 09:39:27,441] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesQuery/insSearchSalesOrder 销售单查询-响应时间:0.174942
+[2023-10-13 09:39:29,169] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/valueadded/decorationOrder/saveDecorationOrder 装潢单保存-响应时间:1.246808
+[2023-10-13 09:39:29,170] decorationOrder->line:129 [INFO]:SN2310130001-关联销售装潢单新建成功-ZH2310130001
+[2023-10-13 09:39:31,535] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/submitOAReview 销售订单提交审核-响应时间:1.887792
+[2023-10-13 09:39:31,536] salesOrder->line:225 [INFO]:{'code': 200, 'message': None, 'data': {'success': True, 'soNo': 'SN2310130001', 'message': '提交审核成功!'}}----None
+[2023-10-13 09:39:42,305] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/searchSalesOrder 销售订单列表查询-响应时间:0.307593
+[2023-10-13 09:39:43,764] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.01511
+[2023-10-13 09:39:43,764] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:39:43,764] wfsAudit->line:53 [INFO]:billType:销售订单审核-正常单据 billCode:BI202310130939365DC597A taskCode:TK202005151071
+[2023-10-13 09:39:46,501] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.240306
+[2023-10-13 09:39:47,210] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.246779
+[2023-10-13 09:39:47,211] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司销售总监']
+[2023-10-13 09:39:47,955] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.267332
+[2023-10-13 09:39:47,955] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:39:50,029] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.623916
+[2023-10-13 09:39:50,030] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司销售总监, 审核已终结
+[2023-10-13 09:39:55,988] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/searchSalesOrder 销售订单列表查询-响应时间:0.426747
+[2023-10-13 09:39:56,850] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/salesOrderDeliveryList 交车确认列表页查询-响应时间:0.271037
+[2023-10-13 09:39:58,818] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/dispatchedAudit 配车确认审核-响应时间:1.456059
+[2023-10-13 09:39:58,818] runFlow->line:222 [INFO]:已配车确认 : JD5KM8R34BA9CF210
+[2023-10-13 09:39:59,665] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/list 结算收款列表查询-响应时间:0.351942
+[2023-10-13 09:39:59,666] settlementGathering->line:28 [INFO]:结算收款查询: SN2310130001 一般销售 交车确认中 未结清
+[2023-10-13 09:40:00,419] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/toCustomerGatheringPage 结算收款新增收款页-响应时间:0.184307
+[2023-10-13 09:40:01,099] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.133938
+[2023-10-13 09:40:01,701] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.116399
+[2023-10-13 09:40:03,443] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/save 结算收款收款保存-响应时间:1.224055
+[2023-10-13 09:40:03,443] settlementGathering->line:75 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '收款成功 ！', 'receiveNo': 'BA2310130003', 'success': True}}
+[2023-10-13 09:40:04,241] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/salesOrderDeliveryList 交车确认列表页查询-响应时间:0.284324
+[2023-10-13 09:40:04,887] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/needConfirm 是否需要交车提示-响应时间:0.1888
+[2023-10-13 09:40:04,887] deliveryCar->line:61 [INFO]:{'code': 200, 'message': None, 'data': {'isDeputyDelivery': False, 'success': True, 'isFixedAssetsType': None, 'needContract': False}}
+[2023-10-13 09:40:05,600] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/checkBeforeDeliveryConfirm 交车确认之前的校验-响应时间:0.255708
+[2023-10-13 09:40:05,600] deliveryCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1}}
+[2023-10-13 09:40:06,270] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/checkIsHasCommercialInsurance 判断交车确认无商业险审核-响应时间:0.144319
+[2023-10-13 09:40:06,271] deliveryCar->line:71 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1}}
+[2023-10-13 09:40:06,944] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/getVehicleRebate 进入车辆返利页面-响应时间:0.237164
+[2023-10-13 09:40:13,075] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/submitVehicleDelivery 车辆返利保存-响应时间:5.674639
+[2023-10-13 09:40:13,075] deliveryCar->line:95 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1, 'message': '交车确认成功！'}}
+[2023-10-13 09:40:13,075] runFlow->line:231 [INFO]:车辆已出库:JD5KM8R34BA9CF210 -----(销售订单已关单:SN2310130001)-----
+[2023-10-13 09:42:43,021] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/initData 购车建议书下拉框初始化-响应时间:0.309421
+[2023-10-13 09:42:43,743] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getInitData 精品查询页面初始化-响应时间:0.233243
+[2023-10-13 09:42:44,893] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.637694
+[2023-10-13 09:42:45,725] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyInfo 在途新增页面初始化-响应时间:0.336565
+[2023-10-13 09:42:46,429] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/initData 车辆入库下拉初始化-响应时间:0.230697
+[2023-10-13 09:42:47,247] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.303478
+[2023-10-13 09:42:47,872] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.133267
+[2023-10-13 09:42:49,553] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/initData 销售订单列表下拉初始化-响应时间:1.155707
+[2023-10-13 09:42:50,311] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderReturn/initData 销售退回新建页面初始化-响应时间:0.294826
+[2023-10-13 09:42:51,152] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/transferOrder/initData 调拨订单新增initData-响应时间:0.351319
+[2023-10-13 09:42:51,746] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.131714
+[2023-10-13 09:42:52,318] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.124546
+[2023-10-13 09:42:53,102] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleOutStock/initData 车辆出库initData-响应时间:0.265041
+[2023-10-13 09:42:56,263] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/system/defaultPara/index 基础参数设置查询-index-响应时间:2.630234
+[2023-10-13 09:42:56,895] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getOptionalList 获取选装包-响应时间:0.114014
+[2023-10-13 09:42:57,519] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getColorList 获取产品内/外饰色-响应时间:0.106803
+[2023-10-13 09:42:58,393] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.137558
+[2023-10-13 09:42:58,393] shippingCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2023-10-13 09:42:58,991] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkFakeFlag 检查是否虚销-响应时间:0.115296
+[2023-10-13 09:42:58,991] shippingCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': -1}}
+[2023-10-13 09:42:59,866] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/checkExsitInStock 是否存在库存-响应时间:0.410704
+[2023-10-13 09:42:59,866] shippingCar->line:89 [INFO]:{'code': 200, 'message': None, 'data': {'vsStock': None, 'isInSo': False}}
+[2023-10-13 09:43:00,668] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTransitDays 标准在途天数-响应时间:0.140319
+[2023-10-13 09:43:01,290] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getAvgTurnoverDays 标准周转天数-响应时间:0.129577
+[2023-10-13 09:43:11,665] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/getProductList 获取动力类型-响应时间:9.922924
+[2023-10-13 09:43:12,752] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotify 在途车保存-响应时间:0.560262
+[2023-10-13 09:43:12,753] shippingCar->line:163 [INFO]:在途车新增保存:{'code': 200, 'message': None, 'data': {'msg': '', 'success': True}}---['9W14VG3U60BP628RY', '08KUT3F94CXJ7MBDL']---
+[2023-10-13 09:43:13,665] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getShippingNotifyList 在途车辆管理列表查询-响应时间:0.231816
+[2023-10-13 09:43:13,666] shippingCar->line:197 [INFO]:在途列表查询: 2
+[2023-10-13 09:43:14,506] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/getCapitalCostList 获取资金成本规则-响应时间:0.349027
+[2023-10-13 09:43:15,171] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/saveShippingNotifyCaptialCost 资金成本设置保存-响应时间:0.185613
+[2023-10-13 09:43:15,171] shippingCar->line:251 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--资金成本设置-资金规则:法透公式规则3
+[2023-10-13 09:43:16,067] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/shippingNotify/commitShippingNotifyToStore 在途车转入库-响应时间:0.426308
+[2023-10-13 09:43:16,068] shippingCar->line:186 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '入库成功！', 'seNo': 'VD2310130002', 'success': True}}--9W14VG3U60BP628RY,08KUT3F94CXJ7MBDL转入库单,入库单号:VD2310130002
+[2023-10-13 09:43:16,791] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.125358
+[2023-10-13 09:43:17,443] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.144359
+[2023-10-13 09:43:18,039] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.123551
+[2023-10-13 09:43:18,628] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.117777
+[2023-10-13 09:43:19,561] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/saveCheckOneCarAll 批量验收保存-响应时间:0.420539
+[2023-10-13 09:43:19,562] vehiclesStockEntry->line:54 [INFO]:{'code': 200, 'message': None, 'data': {'success': True}}--9W14VG3U60BP628RY,08KUT3F94CXJ7MBDL 验收通过
+[2023-10-13 09:43:20,558] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/postBatchAudit 车辆入库提交审核-响应时间:0.511529
+[2023-10-13 09:43:20,558] vehiclesStockEntry->line:65 [INFO]:{'code': 200, 'message': None, 'data': {'messageCode': 1}},9W14VG3U60BP628RY,08KUT3F94CXJ7MBDL 提交审核成功
+[2023-10-13 09:43:26,201] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.131955
+[2023-10-13 09:43:26,810] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.125533
+[2023-10-13 09:43:27,762] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:0.483593
+[2023-10-13 09:43:27,763] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:43:27,763] wfsAudit->line:53 [INFO]:billType:车辆采购入库 billCode:BI20231013094320E39A593 taskCode:TK202005151078
+[2023-10-13 09:43:30,512] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.255643
+[2023-10-13 09:43:31,241] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.252809
+[2023-10-13 09:43:31,242] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司财务经理']
+[2023-10-13 09:43:31,831] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.149624
+[2023-10-13 09:43:31,831] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:43:33,450] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.106441
+[2023-10-13 09:43:33,451] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司财务经理, 审核已终结
+[2023-10-13 09:43:39,060] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchAllSeNo 入库单查询-响应时间:0.117868
+[2023-10-13 09:43:39,653] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vsStockEntry/searchVehicleInfo 入库单内车辆信息-响应时间:0.129105
+[2023-10-13 09:43:39,653] runFlow->line:68 [INFO]:车辆已入库:9W14VG3U60BP628RY,08KUT3F94CXJ7MBDL -----(入库完成)-----
+[2023-10-13 09:43:40,422] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/getVehicleGrossProfitPlanSummary 综合毛利标准设置列表查询-响应时间:0.230471
+[2023-10-13 09:43:40,422] vehicleGrossStandard->line:22 [INFO]:综合毛利标准设置列表查询: 2
+[2023-10-13 09:43:40,423] vehicleGrossStandard->line:43 [INFO]:此次设置单车综合毛利标准: 3307.0
+[2023-10-13 09:43:41,003] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/editVehicleGrossProfitPlan 车辆综合毛利标准列表保存-响应时间:0.135047
+[2023-10-13 09:43:41,004] vehicleGrossStandard->line:49 [INFO]:修改成功！
+[2023-10-13 09:43:41,910] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/applyPriceLimitAudit 车辆综合毛利标准提交审核-响应时间:0.426692
+[2023-10-13 09:43:41,910] vehicleGrossStandard->line:59 [INFO]:{'code': 200, 'message': None, 'data': {'suc': True}}
+[2023-10-13 09:43:42,616] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleLimitPrice/getVehicleGrossProfitPlanSummary 综合毛利标准设置列表查询-响应时间:0.215531
+[2023-10-13 09:43:42,616] vehicleGrossStandard->line:22 [INFO]:综合毛利标准设置列表查询: 2
+[2023-10-13 09:43:43,574] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:0.48639
+[2023-10-13 09:43:43,574] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:43:43,574] wfsAudit->line:53 [INFO]:billType:单车综合毛利审核 billCode:BI20231013094341F05376F taskCode:TK202105101001
+[2023-10-13 09:43:46,351] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.225892
+[2023-10-13 09:43:47,087] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.256417
+[2023-10-13 09:43:47,087] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司总经理']
+[2023-10-13 09:43:47,708] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.170702
+[2023-10-13 09:43:47,708] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:43:49,430] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.211771
+[2023-10-13 09:43:49,431] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司总经理, 审核已终结
+[2023-10-13 09:43:50,625] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/vehicleStock/getVehicleStockList 库存维护列表查询-响应时间:0.679496
+[2023-10-13 09:43:51,721] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.613308
+[2023-10-13 09:43:52,399] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/queryVinInfo 销售订单库存车辆查询-响应时间:0.211525
+[2023-10-13 09:43:54,079] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/queryPoCustomer 选择客户列表查询-响应时间:1.087304
+[2023-10-13 09:43:55,042] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesDepositOrder/returnPoCustomerInfo 客户信息info-响应时间:0.502392
+[2023-10-13 09:43:56,172] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/vehicleStock/getVehicleStockList 库存维护列表查询-响应时间:0.671987
+[2023-10-13 09:43:57,199] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/vehicleMasterData/getVehicleMainDataList 车辆主数据查询-响应时间:0.554976
+[2023-10-13 09:43:57,200] salesOrder->line:74 [INFO]:9W14VG3U60BP628RY, 未配车, 在库
+[2023-10-13 09:43:57,869] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/returnVinInfo 选中vin返回信息-响应时间:0.180959
+[2023-10-13 09:43:59,294] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/saveSalesOrder 销售订单保存-响应时间:0.947276
+[2023-10-13 09:43:59,294] salesOrder->line:216 [INFO]:{'code': 200, 'message': None, 'data': {'orderNo': None, 'success': True, 'isSelected': False, 'soNo': 'SN2310130002'}}
+[2023-10-13 09:43:59,898] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.120711
+[2023-10-13 09:44:00,510] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.138638
+[2023-10-13 09:44:01,099] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/valueadded/decorationManage/getList 装潢项目选择查询-响应时间:0.126882
+[2023-10-13 09:44:01,709] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/parts/decorationPartOut/addDecorationPartOutItemInitData 仓库下拉选择-响应时间:0.152117
+[2023-10-13 09:44:02,916] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/parts/decorationPartOut/getPartStockList 装潢配件查询-响应时间:0.731173
+[2023-10-13 09:44:03,514] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesQuery/insSearchSalesOrder 销售单查询-响应时间:0.140078
+[2023-10-13 09:44:05,422] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/valueadded/decorationOrder/saveDecorationOrder 装潢单保存-响应时间:1.387257
+[2023-10-13 09:44:05,422] decorationOrder->line:129 [INFO]:SN2310130002-关联销售装潢单新建成功-ZH2310130002
+[2023-10-13 09:44:07,565] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/submitOAReview 销售订单提交审核-响应时间:1.584395
+[2023-10-13 09:44:07,565] salesOrder->line:225 [INFO]:{'code': 200, 'message': None, 'data': {'success': True, 'soNo': 'SN2310130002', 'message': '提交审核成功!'}}----None
+[2023-10-13 09:44:18,496] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/searchSalesOrder 销售订单列表查询-响应时间:0.406722
+[2023-10-13 09:44:20,072] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs-es/bpm/wfs/es/billHandle 代办事项列表查询-响应时间:1.082459
+[2023-10-13 09:44:20,073] wfsAudit->line:44 [INFO]:代办事项查询结果: 1
+[2023-10-13 09:44:20,073] wfsAudit->line:53 [INFO]:billType:销售订单审核-正常单据 billCode:BI202310130944120244871 taskCode:TK202005151071
+[2023-10-13 09:44:22,771] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核表单信息-响应时间:0.215958
+[2023-10-13 09:44:23,499] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/getBillFlow 获取审核节点信息-响应时间:0.246104
+[2023-10-13 09:44:23,499] wfsAudit->line:69 [INFO]:---当前订单所有审核节点['子公司销售总监']
+[2023-10-13 09:44:24,293] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/bill/preEndAudit 当前审核节点是否可终结-响应时间:0.271912
+[2023-10-13 09:44:24,293] wfsAudit->line:121 [INFO]:{'code': 200, 'data': {'appoint_flag': 'N', 'can_end': 'Y', 'last_audit': 'Y'}, 'message': '操作成功'}
+[2023-10-13 09:44:26,469] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/dms-wfs/bpm/wfs/audit 审核结果-通过/驳回-响应时间:1.717472
+[2023-10-13 09:44:26,469] wfsAudit->line:215 [INFO]:{'code': 200, 'data': '', 'message': '操作成功'}---可终结审核: 子公司销售总监, 审核已终结
+[2023-10-13 09:44:32,393] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/searchSalesOrder 销售订单列表查询-响应时间:0.424845
+[2023-10-13 09:44:33,178] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/salesOrderDeliveryList 交车确认列表页查询-响应时间:0.293946
+[2023-10-13 09:44:35,063] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrder/dispatchedAudit 配车确认审核-响应时间:1.434836
+[2023-10-13 09:44:35,063] runFlow->line:222 [INFO]:已配车确认 : 9W14VG3U60BP628RY
+[2023-10-13 09:44:35,947] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/list 结算收款列表查询-响应时间:0.395058
+[2023-10-13 09:44:35,948] settlementGathering->line:28 [INFO]:结算收款查询: SN2310130002 一般销售 交车确认中 未结清
+[2023-10-13 09:44:36,680] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/toCustomerGatheringPage 结算收款新增收款页-响应时间:0.207612
+[2023-10-13 09:44:37,507] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/user/info 获取登录用户信息-响应时间:0.115764
+[2023-10-13 09:44:38,105] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/admin/authOption/getAuthOptionTree 选项权限tree-响应时间:0.119771
+[2023-10-13 09:44:39,699] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/selesSettlement/save 结算收款收款保存-响应时间:1.060998
+[2023-10-13 09:44:39,699] settlementGathering->line:75 [INFO]:{'code': 200, 'message': None, 'data': {'msg': '收款成功 ！', 'receiveNo': 'BA2310130004', 'success': True}}
+[2023-10-13 09:44:40,417] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/report/salesOrderFeignUtils/salesOrderDeliveryList 交车确认列表页查询-响应时间:0.226697
+[2023-10-13 09:44:41,072] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/needConfirm 是否需要交车提示-响应时间:0.166364
+[2023-10-13 09:44:41,072] deliveryCar->line:61 [INFO]:{'code': 200, 'message': None, 'data': {'isDeputyDelivery': False, 'success': True, 'isFixedAssetsType': None, 'needContract': False}}
+[2023-10-13 09:44:41,780] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/checkBeforeDeliveryConfirm 交车确认之前的校验-响应时间:0.261474
+[2023-10-13 09:44:41,780] deliveryCar->line:66 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1}}
+[2023-10-13 09:44:42,545] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/checkIsHasCommercialInsurance 判断交车确认无商业险审核-响应时间:0.128673
+[2023-10-13 09:44:42,546] deliveryCar->line:71 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1}}
+[2023-10-13 09:44:43,344] configHttp->line:21 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/getVehicleRebate 进入车辆返利页面-响应时间:0.274431
+[2023-10-13 09:44:47,502] configHttp->line:14 [INFO]:https://dms.t.hxqcgf.com/apigateway/sales/salesOrderDelivery/submitVehicleDelivery 车辆返利保存-响应时间:3.693402
+[2023-10-13 09:44:47,502] deliveryCar->line:95 [INFO]:{'code': 200, 'message': None, 'data': {'code': 1, 'message': '交车确认成功！'}}
+[2023-10-13 09:44:47,503] runFlow->line:231 [INFO]:车辆已出库:9W14VG3U60BP628RY -----(销售订单已关单:SN2310130002)-----

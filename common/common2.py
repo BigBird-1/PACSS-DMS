@@ -1,59 +1,28 @@
-# import os
-# from xlrd import open_workbook
-# from xml.etree import ElementTree as ElementTree
-#
-# from common import configHttp
-# from common.Log import MyLog as Log
-# from readConfig import proDir
-#
-# localConfigHttp = configHttp.ConfigHttp()
-# log = Log.get_log()
-# logger = log.get_logger()
-#
-#
-# # 从excel文件中读取测试用例
-# def get_xls(xls_name, sheet_name):
-#     cls = []
-#     # get xls file's path
-#     xlsPath = os.path.join(proDir, "testFile", xls_name)
-#     # open xls file
-#     file = open_workbook(xlsPath)
-#     # get sheet by name
-#     sheet = file.sheet_by_name(sheet_name)
-#     # get one sheet's rows
-#     nrows = sheet.nrows
-#     for i in range(nrows):
-#         if sheet.row_values(i)[0] != u'case_name':
-#             cls.append(sheet.row_values(i))
-#     return cls
-#
-# # 从xml文件中读取sql语句
-# database = {}
-# def set_xml():
-#     if len(database) == 0:
-#         sql_path = os.path.join(proDir, "testFile", "SQL.xml")
-#         tree = ElementTree.parse(sql_path)
-#         for db in tree.findall("database"):
-#             db_name = db.get("name")
-#             # print(db_name)
-#             table = {}
-#             for tb in db.getchildren():
-#                 table_name = tb.get("name")
-#                 # print(table_name)
-#                 sql = {}
-#                 for data in tb.getchildren():
-#                     sql_id = data.get("id")
-#                     # print(sql_id)
-#                     sql[sql_id] = data.text
-#                 table[table_name] = sql
-#             database[db_name] = table
-#
-# def get_xml_dict(database_name, table_name):
-#     set_xml()
-#     database_dict = database.get(database_name).get(table_name)
-#     return database_dict
-#
-# def get_sql(database_name, table_name, sql_id):
-#     db = get_xml_dict(database_name, table_name)
-#     sql = db.get(sql_id)
-#     return sql
+from math import radians, cos, sin, asin, sqrt
+from geopy.distance import geodesic
+
+
+# 公式计算两点间距离（m）
+
+def geodistance(lng1, lat1, lng2, lat2):
+    # lng1,lat1,lng2,lat2 = (120.12802999999997,30.28708,115.86572000000001,28.7427)
+    lng1, lat1, lng2, lat2 = map(radians, [float(lng1), float(lat1), float(lng2), float(lat2)])  # 经纬度转换成弧度
+    dlon = lng2 - lng1
+    dlat = lat2 - lat1
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+    distance = 2 * asin(sqrt(a)) * 6371 * 1000  # 地球平均半径，6371km
+    distance = round(distance / 1000, 3)
+    return distance
+
+    # 返回 446.721 千米
+
+# 调用geopy包中的方法
+print(geodesic((22.537046, 114.058992), (30.472123, 114.338239)).m)  # 计算两个坐标直线距离
+print(geodesic((22.537046, 114.058992), (30.472123, 114.338239)).km)  # 计算两个坐标直线距离
+# 返回 447.2497993542003 千米
+
+# 南昌：华东交通大学（120.12802999999997,30.28708）
+# 杭州：浙江工商大学（115.86572000000001,28.7427）
+# 用百度地图测量结果：447.02km
+
+print(geodistance(114.058992, 22.537046, 114.338239, 30.472123))
